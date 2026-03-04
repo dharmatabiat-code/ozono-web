@@ -1,11 +1,1099 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Osono Clinic | Expertos en Ozonoterapia Médica y Regenerativa"
+  description="Tratamientos avanzados de ozonoterapia para dolor crónico, hernias discales y bienestar inmunológico."
+>
+<!--Hero -->
+  <section class="relative pt-24 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden has-hero">
+    <!-- Imagen de fondo -->
+    <div class="absolute inset-0">
+      <img src="/img/home/ozono_baner.png" class="w-full h-full object-cover scale-105" alt="Banner principal"/>
+    </div>
+
+    <!-- Overlay más elegante -->
+    <div class="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-black/40">
+    </div>
+
+    <!-- Glow sutil verde -->
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-[#338B85] rounded-full blur-[180px] opacity-20">
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative pt-40 z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center animate-on-scroll animate-fade-up">
+      <!-- TEXTO -->
+      <div class="relative z-10 text-center lg:text-left">
+        <!-- Línea decorativa (ahora verde) -->
+        <div
+          class="flex items-center justify-center lg:justify-start gap-3 mb-6 animate-on-scroll animate-fade-up delay-100"
+        >
+          <span class="w-10 h-0.5 bg-[#338B85]"></span>
+          <span
+            class="text-xs uppercase tracking-widest font-bold text-[#338B85]"
+          >
+            Medicina Biológica Avanzada
+          </span>
+        </div>
+        <h2
+          class="text-4xl md:text-6xl font-extrabold leading-[1.05] text-white animate-on-scroll animate-fade-up delay-200"
+        >
+          Una vida sin
+          <span class="text-[#338B85]">dolor</span>
+          es posible
+        </h2>
+
+        <p
+          class="mt-8 text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 animate-on-scroll animate-fade-up delay-300"
+        >
+          Especialistas en <strong class="text-[#338B85]"
+            >Ozonoterapia Médica</strong
+          >. Eliminamos el dolor crónico y potenciamos tu sistema inmune con
+          protocolos alemanes de alta precisión.
+        </p>
+
+<!-- BOTONES -->
+      <div
+        class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-on-scroll animate-fade-up delay-400"
+      >
+          <a
+            href="#contacto"
+            class="px-8 py-5 bg-linear-to-br from-[#338B85] to-[#2f7c77] text-white rounded-2xl shadow-xl hover:-translate-y-1 hover:shadow-[#338B85]/40 transition-all duration-300 font-bold"
+          >
+            Agendar Evaluación Gratuita
+          </a>
+
+          <a
+            href="#servicios"
+            class="px-8 py-5 bg-white/95 backdrop-blur border border-white/30 text-slate-800 rounded-2xl hover:border-[#338B85] hover:text-[#338B85] hover:shadow-xl transition-all duration-300 font-bold flex items-center justify-center gap-2"
+          >
+            Explorar tratamientos
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+<!-- BENEFICIOS -->
+      <div
+        class="mt-12 pt-8 border-t border-white/20 flex flex-wrap justify-center lg:justify-start gap-8 text-sm font-semibold text-white/90 animate-on-scroll animate-fade-up delay-500"
+      >
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-user-doctor text-[#338B85]"></i>
+            Sin cirugía
+          </div>
+
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-bolt text-[#338B85]"></i>
+            Recuperación rápida
+          </div>
+
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-shield-heart text-[#338B85]"></i>
+            Protocolos Alemanes
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="ozonoterapia" class="relative py-16 md:py-24 lg:py-28 bg-white overflow-hidden">
+    <!-- Background Effects -->
+    <div
+      class="absolute -top-16 -right-16 w-48 h-48 md:w-125 md:h-125 bg-teal-100 rounded-full blur-[100px] md:blur-[140px] opacity-40"
+    >
+    </div>
+    <div
+      class="absolute bottom-[-10%] md:bottom-[-20%] left-[-5%] md:left-[-10%] w-48 h-48 md:w-100 md:h-100 bg-emerald-100 rounded-full blur-[80px] md:blur-[120px] opacity-30"
+    >
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <!-- Header -->
+<div
+        class="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20 animate-on-scroll animate-fade-up"
+      >
+        <h2
+          class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight"
+        >
+          ¿Qué es la <span class="text-red-500">Ozono</span><span
+            class="text-[#338B85]">terapia Médica</span
+          >?
+        </h2>
+
+        <p class="mt-8 text-lg text-slate-600 leading-relaxed">
+          La ozonoterapia es un tratamiento médico complementario que utiliza
+          una mezcla precisa de oxígeno medicinal (O₂) y ozono (O₃) para
+          estimular mecanismos biológicos naturales, mejorar la oxigenación
+          celular y modular procesos inflamatorios.
+        </p>
+      </div>
+
+<!-- Grid Content -->
+      <div class="grid md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
+        <!-- Left Column -->
+        <div class="animate-on-scroll animate-fade-left">
+          <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8">
+            ¿Cómo actúa en el organismo?
+          </h3>
+
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div
+                class="w-10 h-10 bg-teal-50 text-[#338B85] rounded-xl flex items-center justify-center font-bold"
+              >
+                01
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-800">
+                  Oxigenación Profunda
+                </h4>
+                <p class="text-sm text-slate-600 mt-1">
+                  Mejora el metabolismo celular y la disponibilidad de oxígeno
+                  en tejidos inflamados.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="w-10 h-10 bg-teal-50 text-[#338B85] rounded-xl flex items-center justify-center font-bold"
+              >
+                02
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-800">
+                  Modulación Antiinflamatoria
+                </h4>
+                <p class="text-sm text-slate-600 mt-1">
+                  Regula mediadores inflamatorios implicados en dolor crónico y
+                  lesiones articulares.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="w-10 h-10 bg-teal-50 text-[#338B85] rounded-xl flex items-center justify-center font-bold"
+              >
+                03
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-800">
+                  Estimulación Antioxidante
+                </h4>
+                <p class="text-sm text-slate-600 mt-1">
+                  Activa sistemas enzimáticos naturales que combaten el estrés
+                  oxidativo.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="w-10 h-10 bg-teal-50 text-[#338B85] rounded-xl flex items-center justify-center font-bold"
+              >
+                04
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-800">
+                  Acción Antimicrobiana
+                </h4>
+                <p class="text-sm text-slate-600 mt-1">
+                  Puede contribuir al control de bacterias y microorganismos en
+                  aplicaciones locales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Right Column Card -->
+        <div
+          class="animate-on-scroll animate-fade-right bg-linear-to-br from-slate-50 to-white p-6 md:p-8 lg:p-12 rounded-4xl md:rounded-[2.5rem] lg:rounded-[3rem] border border-slate-100 shadow-xl"
+        >
+          <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-10">
+            Beneficios Clínicos Observados
+          </h3>
+
+          <div class="space-y-8 text-slate-600">
+            <div>
+              <h4 class="font-semibold text-slate-800">
+                Dolor Crónico y Hernias Discales
+              </h4>
+              <p class="text-sm mt-2">
+                Alternativa mínimamente invasiva utilizada como apoyo en
+                protocolos para dolor lumbar, cervical y artrosis.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-slate-800">Mejoría Circulatoria</h4>
+              <p class="text-sm mt-2">
+                Aplicaciones en trastornos vasculares periféricos, pie diabético
+                y úlceras crónicas.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-slate-800">
+                Fortalecimiento Inmunológico
+              </h4>
+              <p class="text-sm mt-2">
+                Estimulación sistémica mediante autohemoterapia bajo protocolos
+                médicos controlados.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-slate-800">
+                Recuperación Muscular
+              </h4>
+              <p class="text-sm mt-2">
+                Apoyo en lesiones deportivas y procesos inflamatorios
+                articulares.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-12 pt-6 border-t border-slate-100">
+            <p class="text-xs text-slate-400 leading-relaxed">
+              *La ozonoterapia es un tratamiento complementario. Debe ser
+              aplicado por profesionales de salud capacitados. Los resultados
+              pueden variar según cada paciente y diagnóstico clínico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="servicios" class="relative py-16 md:py-24 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Header -->
+      <div
+        class="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16 lg:mb-20 gap-4 md:gap-6 animate-on-scroll animate-fade-up"
+      >
+        <div class="max-w-2xl">
+          <div class="flex items-center gap-3 mb-4 md:mb-5">
+            <span
+              class="w-8 md:w-10 h-0.75 bg-linear-to-r from-[#338B85] to-red-400 rounded-full"
+            ></span>
+            <span
+              class="text-[#338B85] font-bold uppercase tracking-widest text-xs"
+            >
+              Nuestras Soluciones
+            </span>
+          </div>
+
+          <h3
+            class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight"
+          >
+            Especialidades
+            <span class="text-[#338B85]">Terapéuticas</span>
+          </h3>
+
+          <p class="mt-5 text-slate-500 text-lg leading-relaxed">
+            Diseñamos un plan personalizado basado en medicina de precisión para
+            abordar la raíz de tu padecimiento.
+          </p>
+        </div>
+
+        <a
+          href="#contacto"
+          class="hidden md:flex items-center gap-2 font-bold
+               text-[#338B85] hover:text-red-500
+               transition-colors group"
+        >
+          Ver todos los tratamientos
+          <i
+            class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"
+          ></i>
+        </a>
+      </div>
+
+<!-- Cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+        <!-- Servicio 1 -->
+        <div
+          class="group relative p-6 md:p-8 lg:p-10 rounded-4xl md:rounded-[2.5rem] bg-slate-50 border border-slate-100
+                  transition-all duration-500 hover:bg-white
+                  hover:shadow-[0_25px_60px_rgba(51,139,133,0.12)]
+                  hover:-translate-y-3 animate-on-scroll animate-fade-up delay-100"
+        >
+          <div
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-teal-50 text-[#338B85] rounded-xl md:rounded-2xl
+                    flex items-center justify-center text-2xl md:text-3xl mb-6 md:mb-8
+                    group-hover:bg-[#338B85] group-hover:text-white
+                    transition-all duration-500 shadow-sm"
+          >
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+
+          <h4
+            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4 group-hover:text-[#338B85] transition-colors"
+          >
+            Autohemoterapia Mayor
+          </h4>
+
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Oxigenación profunda de la sangre para combatir la fatiga,
+            neutralizar virus y potenciar el sistema inmune de forma sistémica.
+          </p>
+
+          <div class="space-y-3 mb-8">
+            <div
+              class="flex items-center gap-3 text-sm text-slate-500 font-semibold"
+            >
+              <i class="fa-solid fa-check text-[#338B85]"></i>
+              Detoxificación celular
+            </div>
+            <div
+              class="flex items-center gap-3 text-sm text-slate-500 font-semibold"
+            >
+              <i class="fa-solid fa-check text-[#338B85]"></i>
+              Potente efecto antioxidante
+            </div>
+          </div>
+        </div>
+
+<!-- Servicio 2 (acento rojo estratégico) -->
+        <div
+          class="group relative p-6 md:p-8 lg:p-10 rounded-4xl md:rounded-[2.5rem] bg-slate-50 border border-slate-100
+                  transition-all duration-500 hover:bg-white
+                  hover:shadow-[0_25px_60px_rgba(239,68,68,0.12)]
+                  hover:-translate-y-3 animate-on-scroll animate-fade-up delay-200"
+        >
+          <div
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-red-50 text-red-500 rounded-xl md:rounded-2xl
+                    flex items-center justify-center text-2xl md:text-3xl mb-6 md:mb-8
+                    group-hover:bg-red-500 group-hover:text-white
+                    transition-all duration-500 shadow-sm"
+          >
+            <i class="fa-solid fa-bone"></i>
+          </div>
+
+          <h4
+            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4 group-hover:text-red-500 transition-colors"
+          >
+            Tratamiento de Columna
+          </h4>
+
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Protocolos avanzados para hernias discales y dolor lumbar crónico.
+            La alternativa mínimamente invasiva a la cirugía convencional.
+          </p>
+
+          <div class="space-y-3 mb-8">
+            <div
+              class="flex items-center gap-3 text-sm text-slate-500 font-semibold"
+            >
+              <i class="fa-solid fa-check text-red-500"></i>
+              Discolisis con Ozono
+            </div>
+            <div
+              class="flex items-center gap-3 text-sm text-slate-500 font-semibold"
+            >
+              <i class="fa-solid fa-check text-red-500"></i>
+              Acción antiinflamatoria focal
+            </div>
+          </div>
+        </div>
+
+<!-- Servicio 3 -->
+        <div
+          class="group relative p-6 md:p-8 lg:p-10 rounded-4xl md:rounded-[2.5rem] bg-slate-50 border border-slate-100
+                  transition-all duration-500 hover:bg-white
+                  hover:shadow-[0_25px_60px_rgba(51,139,133,0.12)]
+                  hover:-translate-y-3 animate-on-scroll animate-fade-up delay-300"
+        >
+          <div
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-teal-50 text-[#338B85] rounded-xl md:rounded-2xl
+                    flex items-center justify-center text-2xl md:text-3xl mb-6 md:mb-8
+                    group-hover:bg-[#338B85] group-hover:text-white
+                    transition-all duration-500 shadow-sm"
+          >
+            <i class="fa-solid fa-hand-holding-medical"></i>
+          </div>
+
+          <h4
+            class="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4 group-hover:text-[#338B85] transition-colors"
+          >
+            Pie Diabético y Heridas
+          </h4>
+
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Uso de embolsado de ozono y aceites ozonizados para eliminar
+            infecciones bacterianas y acelerar la regeneración dérmica.
+          </p>
+
+          <div class="space-y-3 mb-8">
+            <div
+              class="flex items-center gap-3 text-sm text-slate-500 font-semibold"
+            >
+              <i class="fa-solid fa-check text-[#338B85]"></i>
+              Potente acción bactericida
+            </div>
+            <div
+              class="flex items-center gap-3 text-sm text-slate-500 font-semibold"
+            >
+              <i class="fa-solid fa-check text-[#338B85]"></i>
+              Reactivación circulatoria
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="dr-quote">
+    <div class="quote-content animate-on-scroll animate-scale-in">
+      <h2 class="quote text-2xl md:text-3xl lg:text-4xl">
+        "La salud no es solo ausencia de enfermedad, es equilibrio y bienestar
+        integral."
+      </h2>
+      <p class="name">— Osono Clinic</p>
+    </div>
+  </section>
+
+<section id="planes" class="py-16 md:py-24 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Header -->
+      <div class="text-center mb-12 md:mb-16 lg:mb-20 animate-on-scroll animate-fade-up">
+        <div
+          class="w-16 md:w-20 h-1 bg-linear-to-r from-teal-500 to-red-400 mx-auto mb-4 md:mb-6 rounded-full"
+        >
+        </div>
+
+        <h3
+          class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900"
+        >
+          Planes de Tratamiento
+        </h3>
+
+        <p class="mt-5 text-slate-500 max-w-2xl mx-auto text-lg">
+          La ozonoterapia es más efectiva en ciclos. Elige el plan que mejor se
+          adapte a tu recuperación.
+        </p>
+      </div>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+        <!-- Plan 1 -->
+        <div
+          class="p-6 md:p-8 lg:p-10 rounded-4xl md:rounded-[2.5rem] border border-slate-200
+                  hover:border-teal-500 hover:shadow-xl
+                  transition-all duration-300 group animate-on-scroll animate-fade-up delay-100"
+        >
+          <h4 class="text-xl md:text-2xl font-bold text-slate-800">Sesión Individual</h4>
+
+          <div class="my-6 md:my-8">
+            <span
+              class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-none"
+            >
+              $45
+            </span>
+            <span class="text-slate-500 ml-2 text-lg"> /sesión </span>
+          </div>
+
+          <ul class="space-y-4 mb-10 text-slate-600 text-sm">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-600"></i>
+              Evaluación inicial básica
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-600"></i>
+              Aplicación de Ozono Médico
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-600"></i>
+              Material descartable incluido
+            </li>
+          </ul>
+
+          <a
+            href="#contacto"
+            class="block text-center py-4 rounded-xl border border-teal-600
+                 text-teal-600 font-bold
+                 group-hover:bg-teal-600 group-hover:text-white
+                 transition duration-300"
+          >
+            Elegir este plan
+          </a>
+        </div>
+
+<!-- Plan Popular -->
+        <div
+          class="p-6 md:p-8 lg:p-10 rounded-4xl md:rounded-[2.5rem] bg-slate-900 text-white
+                  transform md:-translate-y-4 lg:-translate-y-6 shadow-2xl
+                  relative overflow-hidden
+                  border border-red-400/20 animate-on-scroll animate-fade-up delay-200"
+        >
+          <div
+            class="absolute top-0 right-0 bg-red-500
+                    text-xs font-bold px-3 md:px-5 py-1 md:py-2 rounded-bl-xl md:rounded-bl-2xl tracking-wide shadow-md"
+          >
+            MÁS POPULAR
+          </div>
+
+          <h4 class="text-xl md:text-2xl font-bold">Pack Recuperación</h4>
+
+          <div class="my-6 md:my-8">
+            <span
+              class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-teal-400 leading-none"
+            >
+              $200
+            </span>
+            <span class="text-slate-400 ml-2 text-lg"> /5 sesiones </span>
+          </div>
+
+          <p class="text-sm text-red-400 mb-8 font-semibold">
+            Ahorras $25 en total
+          </p>
+
+          <ul class="space-y-4 mb-10 text-sm text-slate-200">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-400"></i>
+              Prioridad en agenda
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-400"></i>
+              Seguimiento médico personalizado
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-400"></i>
+              Reporte de evolución digital
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-400"></i>
+              Incluye hemoterapia menor
+            </li>
+          </ul>
+
+          <a
+            href="#contacto"
+            class="block text-center py-4 rounded-xl bg-teal-500
+                 text-white font-bold hover:bg-teal-400
+                 transition shadow-lg shadow-teal-500/30"
+          >
+            Agendar Pack
+          </a>
+        </div>
+
+<!-- Plan 3 -->
+        <div
+          class="p-6 md:p-8 lg:p-10 rounded-4xl md:rounded-[2.5rem] border border-slate-200
+                  hover:border-teal-500 hover:shadow-xl
+                  transition-all duration-300 group animate-on-scroll animate-fade-up delay-300"
+        >
+          <h4 class="text-xl md:text-2xl font-bold text-slate-800">Plan Regenerativo</h4>
+          <div class="my-6 md:my-8">
+            <span
+              class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-none"
+            >
+              $360
+            </span>
+            <span class="text-slate-500 ml-2 text-lg"> /10 sesiones </span>
+          </div>
+
+          <p class="text-sm text-red-500 mb-8 font-semibold">
+            Ahorras $90 (2 sesiones gratis)
+          </p>
+
+          <ul class="space-y-4 mb-10 text-slate-600 text-sm">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-600"></i>
+              Kit de mantenimiento post-tratamiento
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-600"></i>
+              Consulta de nutrición celular
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-circle-check text-teal-600"></i>
+              Acceso a terapia de luz infrarroja
+            </li>
+          </ul>
+
+          <a
+            href="#contacto"
+            class="block text-center py-4 rounded-xl border border-teal-600
+                 text-teal-600 font-bold
+                 group-hover:bg-teal-600 group-hover:text-white
+                 transition duration-300"
+          >
+            Elegir este plan
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section
+    id="nosotros"
+    class="relative py-16 md:py-20 lg:py-24 bg-slate-950 overflow-hidden"
+  >
+    <!-- Glows -->
+    <div
+      class="absolute top-0 left-1/4 w-48 md:w-72 lg:w-96 h-48 md:h-72 lg:h-96 bg-teal-500/10 rounded-full blur-[80px] md:blur-[120px] -z-10"
+    >
+    </div>
+
+    <!-- Nuevo glow rojo sutil -->
+    <div
+      class="absolute bottom-0 right-1/4 w-48 md:w-72 lg:w-96 h-48 md:h-72 lg:h-96 bg-red-600/10 rounded-full blur-[80px] md:blur-[140px] -z-10"
+    >
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-12 md:mb-16 lg:mb-20 animate-on-scroll animate-fade-up">
+        <h2
+          class="text-2xl md:text-3xl lg:text-5xl font-extrabold text-white tracking-tight"
+        >
+          ¿Por qué confiar en
+          <span class="text-teal-400">Osono Clinic</span>?
+        </h2>
+
+        <!-- Línea ahora con toque rojo -->
+        <div
+          class="mt-4 h-1.5 w-24 bg-linear-to-r from-teal-500 via-teal-400 to-red-500 mx-auto rounded-full"
+        >
+        </div>
+
+        <p class="mt-6 text-slate-400 max-w-2xl mx-auto text-lg">
+          Combinamos protocolos internacionales con tecnología de punta para
+          garantizar tu recuperación.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <!-- CARD 1 -->
+        <div
+          class="group relative p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-red-500/40 transition-all duration-500 animate-on-scroll animate-fade-up delay-100"
+        >
+          <div
+            class="absolute inset-0 bg-linear-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl"
+          >
+          </div>
+
+          <div
+            class="relative flex flex-col items-center lg:items-start text-center lg:text-left"
+          >
+            <div
+              class="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-teal-500/10 text-teal-400 group-hover:bg-red-500 group-hover:text-white transition-all duration-500 shadow-inner"
+            >
+              <i class="fa-solid fa-microscope text-2xl"></i>
+            </div>
+
+            <h4
+              class="text-xl font-bold text-white mb-3 tracking-wide group-hover:text-red-400 transition-colors"
+            >
+              Ciencia Aplicada
+            </h4>
+
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Equipos de última generación con
+              <span class="text-teal-300">grado médico certificado</span>
+              y precisión alemana.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+          class="group relative p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-red-500/40 transition-all duration-500 animate-on-scroll animate-fade-up delay-200"
+        >
+          <div
+            class="absolute inset-0 bg-linear-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl"
+          >
+          </div>
+
+          <div
+            class="relative flex flex-col items-center lg:items-start text-center lg:text-left"
+          >
+            <div
+              class="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-teal-500/10 text-teal-400 group-hover:bg-red-500 group-hover:text-white transition-all duration-500 shadow-inner"
+            >
+              <i class="fa-solid fa-user-doctor text-2xl"></i>
+            </div>
+
+            <h4
+              class="text-xl font-bold text-white mb-3 tracking-wide group-hover:text-red-400 transition-colors"
+            >
+              Especialistas
+            </h4>
+
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Personal médico altamente capacitado en
+              <span class="text-teal-300">ozonoterapia avanzada</span>
+              y dolor crónico.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="group relative p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-red-500/40 transition-all duration-500 animate-on-scroll animate-fade-up delay-300"
+        >
+          <div
+            class="absolute inset-0 bg-linear-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl"
+          >
+          </div>
+
+          <div
+            class="relative flex flex-col items-center lg:items-start text-center lg:text-left"
+          >
+            <div
+              class="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-teal-500/10 text-teal-400 group-hover:bg-red-500 group-hover:text-white transition-all duration-500 shadow-inner"
+            >
+              <i class="fa-solid fa-shield-virus text-2xl"></i>
+            </div>
+
+            <h4
+              class="text-xl font-bold text-white mb-3 tracking-wide group-hover:text-red-400 transition-colors"
+            >
+              Seguridad
+            </h4>
+
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Tratamientos mínimamente invasivos,
+              <span class="text-teal-300">sin efectos secundarios</span>
+              y 100% biocompatibles.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div
+          class="group relative p-8 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-red-500/40 transition-all duration-500 animate-on-scroll animate-fade-up delay-400"
+        >
+          <div
+            class="absolute inset-0 bg-linear-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl"
+          >
+          </div>
+
+          <div
+            class="relative flex flex-col items-center lg:items-start text-center lg:text-left"
+          >
+            <div
+              class="w-14 h-14 mb-6 flex items-center justify-center rounded-2xl bg-teal-500/10 text-teal-400 group-hover:bg-red-500 group-hover:text-white transition-all duration-500 shadow-inner"
+            >
+              <i class="fa-solid fa-chart-line text-2xl"></i>
+            </div>
+
+            <h4
+              class="text-xl font-bold text-white mb-3 tracking-wide group-hover:text-red-400 transition-colors"
+            >
+              Resultados
+            </h4>
+
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Mejoría clínica notable proyectada desde las
+              <span class="text-teal-300">primeras 3 sesiones</span>
+              terapéuticas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- FAQ Section -->
+  <section id="faq" class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
+    <!-- Glow rojo muy sutil -->
+    <div
+      class="absolute -top-10 md:-top-20 -right-10 md:-right-20 w-40 md:w-80 h-40 md:h-80 bg-red-500/10 rounded-full blur-[80px] md:blur-[120px]"
+    >
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-10 md:mb-16 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Preguntas <span class="text-[#338B85]">Frecuentes</span>
+        </h2>
+
+        <!-- Línea con pequeño toque rojo -->
+        <div
+          class="mt-3 md:mt-4 h-1 w-16 md:w-20 bg-linear-to-r from-[#338B85] to-red-400 mx-auto rounded-full"
+        >
+        </div>
+
+        <p class="mt-6 text-slate-600 max-w-2xl mx-auto">
+          Todo lo que necesitas saber sobre la ozonoterapia y cómo puede mejorar
+          tu calidad de vida.
+        </p>
+      </div>
+
+<div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <!-- Imagen -->
+        <div class="relative group animate-on-scroll animate-fade-left">
+          <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+              alt="Tratamiento de Ozonoterapia"
+              class="w-full h-136 object-cover transform group-hover:scale-105 transition-transform duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-linear-to-t from-slate-900/40 to-transparent"
+            >
+            </div>
+          </div>
+        </div>
+
+        <!-- Acordeón -->
+        <div class="space-y-4 animate-on-scroll animate-fade-right">
+          <!-- Item -->
+          <details
+            class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-300 hover:border-[#338B85]/40 open:ring-1 open:ring-red-400/40"
+            open
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer list-none"
+            >
+              <span
+                class="text-lg font-bold text-slate-800 group-open:text-[#338B85] transition-colors"
+              >
+                ¿La ozonoterapia duele?
+              </span>
+
+              <div
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 group-open:bg-red-50 group-open:rotate-180 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-[#338B85] group-open:text-red-500 transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </summary>
+
+            <div
+              class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4"
+            >
+              No. La mayoría de los procedimientos son indoloros o causan una
+              molestia mínima similar a una inyección convencional. Nuestro
+              equipo prioriza tu comodidad.
+            </div>
+          </details>
+
+          <!-- Item -->
+          <details
+            class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-300 hover:border-[#338B85]/40 open:ring-1 open:ring-red-400/40"
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer list-none"
+            >
+              <span
+                class="text-lg font-bold text-slate-800 group-open:text-[#338B85] transition-colors"
+              >
+                ¿Cuántas sesiones necesito?
+              </span>
+
+              <div
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 group-open:bg-red-50 group-open:rotate-180 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-[#338B85] group-open:text-red-500 transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </summary>
+
+            <div
+              class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4"
+            >
+              Depende de la patología. Normally se recomiendan ciclos de 5 a
+              10 sesiones para obtener resultados duraderos y efectivos.
+            </div>
+          </details>
+
+          <!-- Item -->
+          <details
+            class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-300 hover:border-[#338B85]/40 open:ring-1 open:ring-red-400/40"
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer list-none"
+            >
+              <span
+                class="text-lg font-bold text-slate-800 group-open:text-[#338B85] transition-colors"
+              >
+                ¿Es segura la ozonoterapia?
+              </span>
+
+              <div
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 group-open:bg-red-50 group-open:rotate-180 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-[#338B85] group-open:text-red-500 transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </summary>
+
+            <div
+              class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4"
+            >
+              Sí, es un tratamiento mínimamente invasivo con amplios estudios de
+              seguridad. Utilizamos oxígeno médico puro y equipos certificados.
+            </div>
+          </details>
+
+          <!-- Item -->
+          <details
+            class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-300 hover:border-[#338B85]/40 open:ring-1 open:ring-red-400/40"
+          >
+            <summary
+              class="flex justify-between items-center p-6 cursor-pointer list-none"
+            >
+              <span
+                class="text-lg font-bold text-slate-800 group-open:text-[#338B85] transition-colors"
+              >
+                ¿Cuánto tiempo dura cada sesión?
+              </span>
+
+              <div
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 group-open:bg-red-50 group-open:rotate-180 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-[#338B85] group-open:text-red-500 transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </summary>
+
+            <div
+              class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4"
+            >
+              Cada sesión dura entre 30 y 45 minutos. Esto incluye la evaluación
+              clínica y un breve periodo de relajación post-tratamiento.
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dr-quote2">
+    <div class="quote-content animate-on-scroll animate-scale-in">
+      <h2 class="quote">
+        "La ozonoterapia potencia tu bienestar físico y mental, cuidando cada
+        aspecto de tu salud."
+      </h2>
+      <p class="name">— Osono Clinic</p>
+    </div>
+  </section>
+
+<section id="contacto" class="py-16 md:py-24 bg-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+    
+    <!-- INFO -->
+    <div class="animate-on-scroll animate-fade-left">
+      <h3 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 md:mb-6 leading-tight">
+        Empecemos tu camino a la recuperación
+      </h3>
+
+      <p class="text-slate-600 mb-10 text-lg leading-relaxed">
+        Déjanos tus datos y un especialista te contactará para una
+        pre-evaluación telefónica personalizada.
+      </p>
+
+      <div class="space-y-6">
+        <!-- Dirección -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center shadow-sm">
+            <i class="fas fa-map-marker-alt text-lg"></i>
+          </div>
+          <p class="text-slate-700 font-medium">Av. Salud Médica 123, Ciudad Salud</p>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center shadow-sm">
+            <i class="fab fa-whatsapp text-lg"></i>
+          </div>
+          <p class="text-slate-700 font-medium">+51 997 307 782</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form id="form-contacto" class="animate-on-scroll animate-fade-right bg-slate-50 p-6 md:p-8 lg:p-10 rounded-4xl md:rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500">
+      <div class="grid gap-6">
+        <input type="text" id="input-nombre" placeholder="Tu nombre completo" class="p-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-teal-100 focus:border-teal-400 outline-none transition-all" required />
+
+        <input type="tel" id="input-telefono" placeholder="WhatsApp / Teléfono" class="p-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-teal-100 focus:border-teal-400 outline-none transition-all" required />
+
+        <select id="input-motivo" class="p-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-teal-100 focus:border-teal-400 outline-none text-slate-500" required>
+          <option disabled selected>¿Cuál es tu motivo de consulta?</option>
+          <option>Dolor de Espalda / Hernias</option>
+          <option>Artrosis / Rodilla</option>
+          <option>Bienestar / Inmunidad</option>
+          <option>Otro</option>
+        </select>
+
+        <button id="btn-contacto" type="submit" class="w-full bg-linear-to-r from-teal-600 to-teal-700 text-white py-4 rounded-2xl font-bold hover:scale-[1.02] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp"></i>
+          Solicitar Información por WhatsApp
+        </button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+  <a
+    href="https://wa.me/51999999999"
+    target="_blank"
+    aria-label="Chatear por WhatsApp"
+    class="fixed bottom-6 right-6 z-50 group"
+  >
+    <div
+      class="relative flex items-center justify-center w-14 h-14 rounded-full
+                bg-linear-to-br from-[#338B85] to-[#2c7570]
+                shadow-[0_8px_30px_rgba(51,139,133,0.45)]
+                transition-all duration-300
+                hover:scale-110 hover:shadow-[0_15px_40px_rgba(51,139,133,0.65)]"
+    >
+      <!-- Halo animado sutil -->
+      <span
+        class="absolute inset-0 rounded-full bg-[#338B85] opacity-20 animate-ping"
+      ></span>
+
+      <!-- Ícono -->
+      <i class="fab fa-whatsapp text-white text-2xl relative z-10"></i>
+    </div>
+  </a>
 </Layout>
+
