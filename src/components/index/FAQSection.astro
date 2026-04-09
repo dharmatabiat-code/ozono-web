@@ -1,0 +1,123 @@
+---
+import { faqs } from "../../data/faq";
+import { company } from "../../data/company";
+---
+
+<section id="faq" class="py-20 lg:py-32 bg-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      
+      <div class="relative">
+        <div class="sticky top-24">
+          <div class="inline-flex items-center gap-2 mb-4">
+            <span class="w-10 h-1 bg-linear-to-r from-[#338B85] to-teal-200 rounded-full"></span>
+            <span class="text-[#338B85] font-bold text-xs uppercase tracking-widest">Centro de Ayuda</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-6">
+            Resolvemos tus <span class="text-[#338B85]">Dudas Médicas</span>
+          </h2>
+          <p class="text-slate-500 text-lg mb-10 max-w-md">
+            Entendemos que cada paciente es único. Aquí respondemos las consultas más frecuentes sobre nuestros protocolos internacionales.
+          </p>
+
+          <div class="relative group hidden lg:block">
+            <div class="absolute -inset-4 bg-[#338B85]/5 rounded-[3rem] blur-2xl group-hover:bg-[#338B85]/10 transition-all duration-500"></div>
+            <img 
+              src="/img/home/faq-doctor.png" 
+              alt="Dra. Amalia Luque atendiendo paciente" 
+              class="relative rounded-[2.5rem] shadow-2xl border-8 border-white object-cover w-full h-100"
+            />
+            <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce-slow">
+              <div class="w-12 h-12 bg-[#338B85]/10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-user-doctor text-[#338B85]"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase font-bold text-slate-400">Atención Directa</p>
+                <p class="text-sm font-bold text-slate-900">Especialistas Certificados</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4 faq-container">
+        {faqs.map((faq) => (
+          <div class="faq-item group border border-slate-100 rounded-2xl bg-slate-50 overflow-hidden transition-all duration-300 hover:border-[#338B85]/30 hover:bg-white">
+            <details class="group">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span class="font-bold text-slate-800 pr-4 group-open:text-[#338B85] transition-colors text-base">
+                  {faq.question}
+                </span>
+                <div class="flex-none w-8 h-8 border-2 border-[#338B85]/10 rounded-full flex items-center justify-center transition-all group-open:rotate-180 group-open:bg-[#338B85] group-open:border-[#338B85]">
+                  <i class="fa-solid fa-chevron-down text-[10px] text-[#338B85] group-open:text-white"></i>
+                </div>
+              </summary>
+              <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+                <div class="pt-4 border-t border-slate-200/50 animate-fade-in">
+                  {faq.answer}
+                </div>
+              </div>
+            </details>
+          </div>
+        ))}
+
+        <div class="mt-12 p-8 bg-slate-900 rounded-4xl relative overflow-hidden">
+          <div class="relative z-10">
+            <h4 class="font-bold text-white text-lg mb-2">¿Aún tienes dudas?</h4>
+            <p class="text-white/60 text-xs mb-6">Escríbenos y un especialista te responderá pronto.</p>
+            <a 
+              href= {company.contact.linkWhatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-3 px-6 py-3 bg-[#338B85] text-white font-bold rounded-xl text-sm hover:bg-[#2c7570] transition-all"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              WhatsApp
+            </a>
+          </div>
+          <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-[#338B85]/20 rounded-full blur-2xl"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Lógica para cerrar otros acordeones cuando uno se abre
+  const details = document.querySelectorAll('.faq-item details');
+
+  details.forEach((targetDetail) => {
+    targetDetail.addEventListener('toggle', () => {
+      // Cerrar otros detalles cuando este se abre
+      if (targetDetail.hasAttribute('open')) {
+        details.forEach((detail) => {
+          if (detail !== targetDetail) {
+            detail.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-bounce-slow {
+    animation: bounce-slow 4s ease-in-out infinite;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

@@ -59,43 +59,6 @@ details[open] {
   --tw-ring-color: var(--color-teal);
 }
 
-/* =========================
-   HEADER SCROLL STYLES
-========================= */
-#main-header {
-  height: 8rem;
-  transition: all 0.4s ease;
-  background: transparent;
-  border-bottom: 1px solid transparent;
-}
-
-#main-header.header-scrolled {
-  height: 4.5rem;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transform: translateY(-4px);
-}
-
-#main-header .logo-img {
-  height: 4rem;
-  transition: all 0.4s ease;
-}
-
-#main-header.header-scrolled .logo-img {
-  height: 2.5rem;
-}
-
-#main-header .nav-container {
-  font-size: 1.125rem;
-  gap: 2.5rem;
-  transition: all 0.4s ease;
-}
-
-#main-header.header-scrolled .nav-container {
-  font-size: 0.95rem;
-  gap: 1.8rem;
-}
 
 /* =========================
    VARIABLES GLOBALES

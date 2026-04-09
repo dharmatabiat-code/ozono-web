@@ -1,0 +1,107 @@
+---
+// NosotrosSection.astro (Representando la Dirección Médica)
+---
+
+<section id="direccion-medica" class="relative py-20 lg:py-32 overflow-hidden bg-white">
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/2"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl z-10 group">
+          <div class="w-full h-180 flex items-center justify-center bg-slate-200">
+            <img 
+              src="/img/home/1.jpeg" 
+              alt="Dra. Amalia Luque Huancapaza - Dirección Médica"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          <div class="absolute top-6 left-6 bg-[#338B85]/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.15em] shadow-lg border border-white/20">
+            CMP 057731 | RNE 021516
+          </div>
+
+          <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-slate-100">
+            <div class="flex items-center gap-4">
+              <div class="flex-none w-12 h-12 bg-[#338B85]/10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-earth-americas text-[#338B85] text-lg"></i>
+              </div>
+              <p class="text-sm font-bold text-slate-700 leading-tight">
+                Trayectoria Médica Internacional <br/> 
+                <span class="text-[#338B85] font-medium">Rusia • España • Colombia • Argentina</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="absolute -top-6 -left-6 w-32 h-32 bg-[#338B85]/10 rounded-full -z-10 animate-pulse"></div>
+        <div class="absolute -bottom-10 -right-10 w-64 h-64 border-2 border-[#338B85]/10 rounded-3xl -z-10"></div>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div class="inline-flex items-center gap-2">
+          <span class="w-10 h-1 bg-linear-to-r from-[#338B85] to-teal-200 rounded-full"></span>
+          <span class="text-[#338B85] font-bold text-xs uppercase tracking-widest">Liderazgo Clínico</span>
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-[1.1]">
+          Dra. Amalia Luque: <br/>
+          <span class="text-[#338B85]">Ciencia Médica Integrativa</span>
+        </h2>
+
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Bajo la dirección de la <strong>Dra. Amalia Luque Huancapaza</strong>, médico cirujano formada en la <em>Universidad Rusa de la Amistad de los Pueblos</em>, nuestro centro se especializa en restaurar la salud desde la raíz biológica. Integramos protocolos de vanguardia europea con un enfoque humano y personalizado.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-6 mt-2">
+          <div class="flex gap-4">
+            <div class="flex-none w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center border border-slate-100">
+              <i class="fa-solid fa-microscope text-[#338B85] text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-800">Alta Especialidad</h4>
+              <p class="text-sm text-slate-500 italic">Ozonoterapia Médica y Medicina Ortomolecular.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-none w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center border border-slate-100">
+              <i class="fa-solid fa-dna text-[#338B85] text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-800">Innovación Genética</h4>
+              <p class="text-sm text-slate-500 italic">Epigenética Aplicada y Nutrigenética avanzada.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mt-2">
+          {["Biomagnetismo Médico", "Acupuntura", "Medicina Regenerativa", "Ventosas"].map((tag) => (
+            <span class="px-3 py-1 bg-[#338B85]/5 text-[#338B85] text-[10px] font-bold rounded-md uppercase tracking-wider border border-[#338B85]/10">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div class="mt-8 p-8 bg-slate-900 rounded-3xl relative overflow-hidden group">
+          <div class="relative z-10">
+            <i class="fa-solid fa-quote-left text-[#338B85] text-2xl mb-4 block"></i>
+            <p class="italic text-white/90 text-lg leading-relaxed">
+              "Mi misión es integrar la ciencia médica con terapias biorreguladoras para devolverle a mis pacientes la movilidad y la alegría de vivir sin dolor."
+            </p>
+            <div class="mt-6 flex items-center gap-4">
+              <div class="h-px w-8 bg-[#338B85]"></div>
+              <div>
+                <p class="font-bold text-white tracking-wide">Dra. Amalia Luque Huancapaza</p>
+                <p class="text-[#338B85] text-[10px] uppercase tracking-[0.2em] font-medium mt-1">Médico Cirujano y Directora Médica</p>
+              </div>
+            </div>
+          </div>
+          <i class="fa-solid fa-briefcase-medical absolute -bottom-6 -right-6 text-white/5 text-9xl -rotate-12"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

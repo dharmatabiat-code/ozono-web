@@ -1,0 +1,90 @@
+---
+// AboutSection.astro
+---
+
+<section id="sobre-nosotros" class="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+  <div class="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="flex flex-col gap-6">
+        <div class="inline-flex items-center gap-2">
+          <span class="w-10 h-1 bg-linear-to-r from-[#338B85] to-teal-200 rounded-full"></span>
+          <span class="text-[#338B85] font-bold text-xs uppercase tracking-widest">Nuestra Esencia</span>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+          Más que una clínica, somos un centro de <span class="text-[#338B85]">Restauración Biológica</span>
+        </h2>
+
+        <p class="text-lg text-slate-600 leading-relaxed">
+          En <strong>Osono Clinic</strong>, entendemos que el cuerpo tiene una capacidad innata de sanación cuando se le brindan las herramientas correctas. Bajo una visión europea y protocolos científicos, hemos diseñado un espacio donde la tecnología médica y la medicina natural convergen.
+        </p>
+
+        <div class="space-y-4 mt-2">
+          <div class="flex items-start gap-4">
+            <div class="mt-1 flex-none w-5 h-5 rounded-full bg-[#338B85]/20 flex items-center justify-center">
+              <i class="fa-solid fa-check text-[#338B85] text-[10px]"></i>
+            </div>
+            <p class="text-slate-700 text-sm"><strong class="text-slate-900">Enfoque en la Causa:</strong> No silenciamos síntomas; buscamos el origen del desequilibrio metabólico y celular.</p>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="mt-1 flex-none w-5 h-5 rounded-full bg-[#338B85]/20 flex items-center justify-center">
+              <i class="fa-solid fa-check text-[#338B85] text-[10px]"></i>
+            </div>
+            <p class="text-slate-700 text-sm"><strong class="text-slate-900">Personalización Genética:</strong> Utilizamos herramientas como la epigenética para adaptar cada tratamiento a tu ADN.</p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="mt-1 flex-none w-5 h-5 rounded-full bg-[#338B85]/20 flex items-center justify-center">
+              <i class="fa-solid fa-check text-[#338B85] text-[10px]"></i>
+            </div>
+            <p class="text-slate-700 text-sm"><strong class="text-slate-900">Ética y Rigor:</strong> Todos nuestros procedimientos cuentan con respaldo médico y certificaciones internacionales.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mt-6 pt-8 border-t border-slate-200">
+          <div>
+            <p class="text-2xl font-black text-slate-900">100%</p>
+            <p class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">No Invasivo</p>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-[#338B85]">Vanguardia</p>
+            <p class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Tecnológica</p>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-slate-900">+5</p>
+            <p class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Países de formación</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative h-125 md:h-150">
+        <div class="absolute top-0 right-0 w-4/5 h-4/5 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          <img 
+            src="/img/home/ambiente.png" 
+            alt="Ambiente de Osono Clinic" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-3/5 h-3/5 rounded-3xl overflow-hidden shadow-2xl border-4 border-white z-10">
+          <img 
+            src="/img/home/tratamiento.png" 
+            alt="Tratamiento avanzado" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-[#338B85] rounded-full flex items-center justify-center p-4 text-center z-20 shadow-xl">
+          <p class="text-white text-[10px] font-bold uppercase leading-tight tracking-tighter">
+            Excelencia en Salud
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

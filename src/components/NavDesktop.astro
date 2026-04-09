@@ -1,0 +1,29 @@
+---
+interface Props {
+  navItems: { label: string; href: string }[];
+}
+
+const { navItems } = Astro.props;
+---
+<nav class="hidden lg:flex items-center gap-10" role="navigation">
+  {navItems.map((item) => (
+    <a
+      href={item.href}
+      class="nav-link relative text-white font-medium text-[13px] tracking-[0.15em] uppercase hover:text-teal-400 transition-colors duration-300 group"
+    >
+      {item.label}
+      <span class="absolute -bottom-2 left-1/2 w-0 h-0.5 bg-[#338B85] transition-all duration-300 group-hover:w-full group-hover:left-0" />
+    </a>
+  ))}
+
+  <a
+    href="#contacto"
+    class="group relative overflow-hidden ml-4 bg-[#338B85] text-white text-[11px] font-bold tracking-[0.2em] px-8 py-4 rounded-full transition-all duration-500 hover:shadow-[0_10px_30px_rgba(51,139,133,0.3)] active:scale-95"
+  >
+    <span class="relative z-10 flex items-center gap-2 uppercase">
+      <i class="fas fa-calendar-alt text-[10px]"></i>
+      Agendar Cita
+    </span>
+    <div class="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+  </a>
+</nav>

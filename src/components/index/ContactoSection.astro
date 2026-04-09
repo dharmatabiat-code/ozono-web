@@ -1,0 +1,146 @@
+---
+import { company } from "../../data/company";
+---
+
+<section id="contacto" class="py-20 md:py-32 bg-white relative overflow-hidden">
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#338B85]/5 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-[#338B85]/5 rounded-full blur-3xl"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      
+      <div class="text-center md:text-left">
+        <div class="inline-flex items-center gap-3 mb-6">
+          <span class="w-10 h-1 bg-linear-to-r from-[#338B85] to-teal-200 rounded-full"></span>
+          <span class="text-[#338B85] font-bold uppercase tracking-widest text-xs">Contacto Directo</span>
+        </div>
+        
+        <h3 class="text-3xl md:text-5xl font-black text-slate-900 mb-8 leading-tight">
+          Empecemos tu camino a la <span class="text-[#338B85]">Recuperación</span>
+        </h3>
+
+        <p class="text-slate-600 mb-12 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+          Déjanos tus datos y un especialista de {company.name} te contactará para una pre-evaluación personalizada.
+        </p>
+
+        <div class="grid gap-5 max-w-md mx-auto md:mx-0">
+          <a href={company.address.mapLink} target="_blank" class="flex items-center gap-5 p-5 rounded-4xl bg-slate-50 border border-slate-100/50 hover:bg-white hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
+            <div class="w-12 h-12 shrink-0 bg-white text-[#338B85] rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-[#338B85] group-hover:text-white transition-all duration-500">
+              <i class="fas fa-map-location-dot text-xl"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em] mb-1">Dirección</p>
+              <p class="text-slate-700 font-bold leading-tight">
+                {company.address.street}
+              </p>
+              <p class="text-slate-500 text-xs mt-0.5">
+                {company.address.colony}, {company.address.city}
+              </p>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-5 p-5 rounded-4xl bg-slate-50 border border-slate-100/50 hover:bg-white hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
+            <div class="w-12 h-12 shrink-0 bg-white text-[#338B85] rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-[#338B85] group-hover:text-white transition-all duration-500">
+              <i class="fas fa-clock text-xl"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em] mb-1">Horario</p>
+              <p class="text-slate-700 font-bold leading-tight">
+                Lun - Sáb: {company.hours.mondayToSaturday.open} - {company.hours.mondayToSaturday.close}
+              </p>
+              <p class="text-slate-500 text-xs mt-0.5 italic">
+                Dom: {company.hours.sunday.note}
+              </p>
+            </div>
+          </div>
+
+          <a href={company.contact.linkWhatsapp} class="flex items-center gap-5 p-5 rounded-4xl bg-slate-50 border border-slate-100/50 hover:bg-white hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-500 group">
+            <div class="w-12 h-12 shrink-0 bg-white text-[#338B85] rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-[#338B85] group-hover:text-white transition-all duration-500">
+              <i class="fab fa-whatsapp text-2xl"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em] mb-1">Contacto</p>
+              <p class="text-slate-700 font-bold leading-tight">
+                {company.contact.whatsapp}
+              </p>
+              <p class="text-slate-500 text-xs mt-0.5">
+                Click para iniciar chat
+              </p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-linear-to-tr from-[#338B85] to-teal-200 rounded-[3rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+        
+        <form id="contact-form" class="relative bg-white p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl border border-slate-100 transition-all">
+          <input type="hidden" id="whatsapp-number" value={company.contact.whatsapp} />
+          
+          <div class="mb-8">
+            <h4 class="text-2xl font-black text-slate-900 leading-tight">Solicitar Cita</h4>
+            <p class="text-sm text-slate-500 mt-2">Completa el formulario y te escribiremos.</p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="relative">
+              <i class="fas fa-user absolute left-5 top-5 text-slate-300"></i>
+              <input type="text" id="firstName" placeholder="Nombre completo" class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-[#338B85]/10 focus:border-[#338B85] outline-none transition-all" required />
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+               <div class="relative">
+                <i class="fas fa-envelope absolute left-5 top-5 text-slate-300"></i>
+                <input type="email" id="email" placeholder="Correo electrónico" class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-[#338B85]/10 focus:border-[#338B85] outline-none transition-all" required />
+              </div>
+              <div class="relative">
+                <i class="fab fa-whatsapp absolute left-5 top-5 text-slate-300"></i>
+                <input type="tel" id="phone" placeholder="WhatsApp" class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-[#338B85]/10 focus:border-[#338B85] outline-none transition-all" required />
+              </div>
+            </div>
+
+            <div class="relative">
+              <i class="fas fa-notes-medical absolute left-5 top-5 text-slate-300"></i>
+              <select id="service" class="w-full pl-12 pr-10 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-[#338B85]/10 focus:border-[#338B85] outline-none appearance-none cursor-pointer text-slate-600" required>
+                <option value="" disabled selected>Selecciona un servicio</option>
+                <option value="Hernia Discal">Tratamiento de Hernia Discal</option>
+                <option value="Ozonoterapia">Ozonoterapia Sistémica</option>
+                <option value="Artrosis">Recuperación de Artrosis</option>
+                <option value="Estética">Ozono Estético Facial</option>
+              </select>
+            </div>
+
+            <div class="relative">
+              <i class="fas fa-comment-alt absolute left-5 top-5 text-slate-300"></i>
+              <textarea id="message" rows="3" placeholder="¿En qué podemos ayudarte?" class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-[#338B85]/10 focus:border-[#338B85] outline-none transition-all resize-none" required></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-slate-900 text-white py-5 rounded-2xl font-bold hover:bg-[#338B85] hover:scale-[1.02] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 group mt-4">
+              <i class="fab fa-whatsapp text-xl text-green-400 group-hover:rotate-12 transition-transform"></i>
+              Enviar solicitud por WhatsApp
+            </button>
+            
+            <p class="text-[10px] text-center text-slate-400 px-6 mt-4 uppercase tracking-tighter">
+              Privacidad garantizada conforme a la Ley N° 29733 (Perú)
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Flecha personalizada del select */
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23338B85'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 1.25rem;
+  }
+</style>
+
+<script>
+  import "../../scripts/contact-form";
+</script>

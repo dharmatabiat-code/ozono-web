@@ -1,0 +1,65 @@
+---
+// BenefitsSection.astro
+import { benefits } from "../../data/benefits";
+---
+
+<section id="beneficios" class="relative py-20 lg:py-32 bg-slate-900 overflow-hidden">
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#338B85]/10 rounded-full blur-[120px]"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#338B85]/10 rounded-full blur-[120px]"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    
+    <div class="max-w-3xl mb-16 lg:mb-24">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="w-10 h-1 bg-linear-to-r from-[#338B85] to-teal-200 rounded-full"></span>
+        <span class="text-[#338B85] font-bold uppercase tracking-[0.2em] text-xs">
+          ¿Por qué elegirnos?
+        </span>
+      </div>
+      <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">
+        Resultados Reales para una <br class="hidden md:block"/> 
+        <span class="text-[#338B85]">Salud Transformada</span>
+      </h2>
+      <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+        La medicina integrativa no solo trata el síntoma, restaura el equilibrio biológico 
+        de tu organismo mediante procesos naturales y científicos.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 lg:gap-x-12">
+      {benefits.map((benefit) => (
+        <div class="group relative">
+          <span class="absolute -top-6 -left-2 text-7xl md:text-8xl font-black text-white/3 group-hover:text-[#338B85]/10 transition-colors duration-500 select-none">
+            {benefit.number}
+          </span>
+
+          <div class="relative z-10">
+            <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-[#338B85]/50 group-hover:bg-[#338B85]/10 transition-all duration-500">
+              <i class={`${benefit.icon} text-2xl text-[#338B85]`}></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#338B85] transition-colors">
+              {benefit.title}
+            </h3>
+
+            <p class="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors">
+              {benefit.description}
+            </p>
+          </div>
+
+          <div class="mt-8 h-px w-12 bg-white/10 group-hover:w-full group-hover:bg-[#338B85] transition-all duration-700"></div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-20 flex justify-center">
+        <div class="inline-flex items-center gap-6 p-2 pl-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
+            <span class="text-white/70 text-sm font-medium hidden sm:block">¿Listo para recuperar tu bienestar?</span>
+            <a href="#contacto" class="px-6 py-3 bg-[#338B85] hover:bg-[#2c7570] text-white text-sm font-bold rounded-full transition-all">
+                Agenda tu cita ahora
+            </a>
+        </div>
+    </div>
+
+  </div>
+</section>
