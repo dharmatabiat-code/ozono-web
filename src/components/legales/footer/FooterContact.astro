@@ -1,0 +1,48 @@
+---
+interface Props {
+  // Cambiamos 'address' de objeto a string para que acepte el formato que envías
+  address: string; 
+  phone: string;
+  email: string;
+}
+
+const { address, phone, email } = Astro.props;
+---
+
+<div class="flex flex-col items-center md:items-start">
+  <h2 class="text-white font-bold mb-10 text-[12px] uppercase tracking-[0.4em] flex items-center gap-3">
+    <span class="w-1.5 h-1.5 bg-teal-500 rounded-full shadow-[0_0_8px_rgba(20,184,166,0.6)]"></span> 
+    Contacto
+  </h2>
+  
+  <address class="not-italic">
+    <ul class="space-y-6">
+      <li class="flex items-start gap-4 group cursor-default">
+        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-teal-500 shrink-0 transition-all duration-300 group-hover:bg-teal-600 group-hover:text-white">
+          <i class="fas fa-map-marker-alt text-sm"></i>
+        </div>
+        <span class="text-slate-400 text-[13px] leading-relaxed font-light">
+          <Fragment set:html={address} />
+        </span>
+      </li>
+
+      <li class="flex items-center gap-4 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-teal-500 shrink-0 transition-all duration-300 group-hover:bg-teal-600 group-hover:text-white">
+          <i class="fas fa-phone-alt text-sm"></i>
+        </div>
+        <a href={`tel:${phone}`} class="text-slate-400 text-[13px] font-medium hover:text-teal-400 transition-colors">
+          {phone}
+        </a>
+      </li>
+
+      <li class="flex items-center gap-4 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-teal-500 shrink-0 transition-all duration-300 group-hover:bg-teal-600 group-hover:text-white">
+          <i class="fas fa-envelope text-xs"></i>
+        </div>
+        <a href={`mailto:${email}`} class="text-slate-400 text-[13px] font-medium hover:text-teal-400 transition-colors break-all">
+          {email}
+        </a>
+      </li>
+    </ul>
+  </address>
+</div>

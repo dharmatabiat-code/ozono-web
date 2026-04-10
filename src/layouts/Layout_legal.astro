@@ -1,57 +1,203 @@
 ---
+import "../styles/dr-quote.css";
 import "../styles/global.css";
-import "../styles/legales/legales.css";
 import Header from "../components/legales/Header.astro";
 import Footer from "../components/legales/Footer.astro";
-const { title, description } = Astro.props;
+
+import { company } from "../data/company";
+import { seo } from "../data/seo";
+
+// Correcto
+import AOS from "aos";
+import "aos/dist/aos.css"; // Esto debe ir en el head o aquí mismo
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = seo.meta.title.default,
+  description = seo.meta.description.default,
+  canonicalURL = Astro.url.href,
+} = Astro.props;
+
+// Build full URL
+const siteUrl = seo.site.url;
+const defaultImage = "/logos/logo-osono.png";
+
+// --- SCHEMAS (JSON-LD) NIVEL DHARMA ---
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: seo.schema.organization.name,
+  url: siteUrl,
+  logo: siteUrl + "/logos/icono.png",
+  sameAs: seo.schema.organization.sameAs,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: company.contact.phone,
+    contactType: "customer service",
+  },
+};
+
+const medicalClinicSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: seo.schema.medicalClinic.name,
+  description: seo.schema.medicalClinic.description,
+  url: siteUrl,
+  logo: siteUrl + "/logos/icono.png",
+  image: siteUrl + "/img/clinica-fachada.jpg",
+  priceRange: seo.schema.medicalClinic.priceRange,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: company.address.street,
+    addressLocality: company.address.city,
+    addressRegion: company.address.state,
+    postalCode: company.address.zip,
+    addressCountry: "PE",
+  },
+  telephone: company.contact.phone,
+  email: company.contact.email,
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "-13.1588", // Ajustar a coordenadas reales de Osono
+    longitude: "-74.2239"
+  }
+};
+
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang={seo.site.language} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="author" content="Osono Clinic" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0d9488" />
-
-    <!-- Favicon -->
+    
     <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
 
-    <!-- Preconnect -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={seo.meta.author} />
+    <meta name="keywords" content={seo.meta.keywords.join(", ")} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={siteUrl + defaultImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-
-    <!-- Material Icons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(medicalClinicSchema)} />
   </head>
 
-  <body class="bg-slate-50 text-slate-800 font-sans">
-    <Header />
+  <body class="bg-slate-50 text-slate-900 antialiased font-sans">
+    
+    <div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white transition-opacity duration-1000">
+      <div class="flex flex-col items-center">
+        <div class="w-2 h-2 bg-[#338B85] rounded-full animate-ping mb-6"></div>
+        <p class="text-[10px] md:text-xs uppercase tracking-[0.6em] text-slate-800 font-medium animate-pulse ml-[0.6em]">
+          Bienvenido a <span class="text-[#338B85]">Osono Clinic</span>
+        </p>
+      </div>
+    </div>
 
+    <Header />
     <main>
       <slot />
     </main>
-
     <Footer />
 
-    <script src="../js/contacto.js"></script>
+    <script>
+      import AOS from "aos";
+
+      const handleLoader = () => {
+        const loader = document.getElementById("preloader");
+        if (loader) {
+          window.addEventListener("load", () => {
+            setTimeout(() => {
+              loader.classList.add("opacity-0", "pointer-events-none");
+              initAOS();
+            }, 400); // Un poco más de tiempo para elegancia
+          });
+        }
+      };
+
+      const initAOS = () => {
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 120,
+        });
+      };
+
+      handleLoader();
+
+      // Soporte para ViewTransitions de Astro
+      document.addEventListener("astro:after-swap", () => {
+        initAOS();
+      });
+    </script>
   </body>
 </html>
+
+<style is:global>
+  :root {
+    /* Paleta Osono - Teal & Gold */
+    --brand-teal: #338B85;
+    --brand-teal-light: #4aa7a0;
+    --brand-teal-dark: #266b66;
+    --brand-gold: #D4A52A;
+    
+    --font-main: "Plus Jakarta Sans", sans-serif;
+  }
+  
+  html, body {
+    font-family: var(--font-main);
+  }
+
+  /* Scrollbar Estilizada Premium */
+  ::-webkit-scrollbar { 
+    width: 10px; 
+  }
+  ::-webkit-scrollbar-track { 
+    background: #f8fafc; 
+  }
+  ::-webkit-scrollbar-thumb { 
+    background: var(--brand-teal); 
+    border-radius: 5px;
+    border: 2px solid #f8fafc;
+  }
+  ::-webkit-scrollbar-thumb:hover { 
+    background: var(--brand-teal-dark); 
+  }
+
+  /* Selección de texto */
+  ::selection {
+    background: var(--brand-teal);
+    color: white;
+  }
+
+  /* Animaciones */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1.2s ease-out forwards;
+  }
+</style>

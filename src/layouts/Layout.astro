@@ -1,11 +1,16 @@
 ---
+import "../styles/dr-quote.css";
 import "../styles/global.css";
-import "../styles/index.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { seo } from "../data/seo";
+
 import { company } from "../data/company";
-import { faqs as faq } from "../data/faq"; 
+import { seo } from "../data/seo";
+import { faqs as faq } from "../data/faq"; // Alineado con Dharma
+
+// Correcto
+import AOS from "aos";
+import "aos/dist/aos.css"; // Esto debe ir en el head o aquí mismo
 
 interface Props {
   title?: string;
@@ -19,44 +24,62 @@ const {
   canonicalURL = Astro.url.href,
 } = Astro.props;
 
+// Build full URL
 const siteUrl = seo.site.url;
 const defaultImage = "/logos/logo-osono.png";
 
-// --- SCHEMAS (JSON-LD) ---
+// --- SCHEMAS (JSON-LD) NIVEL DHARMA ---
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: seo.schema.organization.name,
+  url: siteUrl,
+  logo: siteUrl + "/logos/icono.png",
+  sameAs: seo.schema.organization.sameAs,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: company.contact.phone,
+    contactType: "customer service",
+  },
+};
+
 const medicalClinicSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
-  "name": seo.schema.medicalClinic.name,
-  "description": seo.schema.medicalClinic.description,
-  "url": siteUrl,
-  "logo": siteUrl + "/logos/icono.png",
-  "image": siteUrl + "/img/clinica-fachada.jpg",
-  "priceRange": seo.schema.medicalClinic.priceRange,
-  "paymentAccepted": seo.schema.medicalClinic.paymentAccepted,
-  "currenciesAccepted": seo.schema.medicalClinic.currenciesAccepted,
-  "address": {
+  name: seo.schema.medicalClinic.name,
+  description: seo.schema.medicalClinic.description,
+  url: siteUrl,
+  logo: siteUrl + "/logos/icono.png",
+  image: siteUrl + "/img/clinica-fachada.jpg",
+  priceRange: seo.schema.medicalClinic.priceRange,
+  address: {
     "@type": "PostalAddress",
-    "streetAddress": company.address.street,
-    "addressLocality": company.address.city,
-    "addressRegion": company.address.state,
-    "postalCode": company.address.zip,
-    "addressCountry": "PE"
+    streetAddress: company.address.street,
+    addressLocality: company.address.city,
+    addressRegion: company.address.state,
+    postalCode: company.address.zip,
+    addressCountry: "PE",
   },
-  "telephone": company.contact.phone,
-  "email": company.contact.email
+  telephone: company.contact.phone,
+  email: company.contact.email,
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "-13.1588", // Ajustar a coordenadas reales de Osono
+    longitude: "-74.2239"
+  }
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": faq.map((f) => ({
+  mainEntity: faq.map((f) => ({
     "@type": "Question",
-    "name": f.question,
-    "acceptedAnswer": {
+    name: f.question,
+    acceptedAnswer: {
       "@type": "Answer",
-      "text": f.answer
-    }
-  }))
+      text: f.answer,
+    },
+  })),
 };
 ---
 
@@ -81,39 +104,114 @@ const faqSchema = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={siteUrl + defaultImage} />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(medicalClinicSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </head>
 
   <body class="bg-slate-50 text-slate-900 antialiased font-sans">
-
+    
+    <div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white transition-opacity duration-1000">
+      <div class="flex flex-col items-center">
+        <div class="w-2 h-2 bg-[#338B85] rounded-full animate-ping mb-6"></div>
+        <p class="text-[10px] md:text-xs uppercase tracking-[0.6em] text-slate-800 font-medium animate-pulse ml-[0.6em]">
+          Bienvenido a <span class="text-[#338B85]">Osono Clinic</span>
+        </p>
+      </div>
+    </div>
 
     <Header />
     <main>
       <slot />
     </main>
-     <Footer />
-    <script src="../js/contacto.js"></script>
+    <Footer />
+
+    <script>
+      import AOS from "aos";
+
+      const handleLoader = () => {
+        const loader = document.getElementById("preloader");
+        if (loader) {
+          window.addEventListener("load", () => {
+            setTimeout(() => {
+              loader.classList.add("opacity-0", "pointer-events-none");
+              initAOS();
+            }, 400); // Un poco más de tiempo para elegancia
+          });
+        }
+      };
+
+      const initAOS = () => {
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 120,
+        });
+      };
+
+      handleLoader();
+
+      // Soporte para ViewTransitions de Astro
+      document.addEventListener("astro:after-swap", () => {
+        initAOS();
+      });
+    </script>
   </body>
 </html>
 
 <style is:global>
   :root {
+    /* Paleta Osono - Teal & Gold */
     --brand-teal: #338B85;
+    --brand-teal-light: #4aa7a0;
+    --brand-teal-dark: #266b66;
     --brand-gold: #D4A52A;
+    
+    --font-main: "Plus Jakarta Sans", sans-serif;
   }
   
-  /* Scrollbar Estilizada */
-  ::-webkit-scrollbar { width: 8px; }
-  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  html, body {
+    font-family: var(--font-main);
+  }
+
+  /* Scrollbar Estilizada Premium */
+  ::-webkit-scrollbar { 
+    width: 10px; 
+  }
+  ::-webkit-scrollbar-track { 
+    background: #f8fafc; 
+  }
   ::-webkit-scrollbar-thumb { 
     background: var(--brand-teal); 
-    border-radius: 10px; 
+    border-radius: 5px;
+    border: 2px solid #f8fafc;
+  }
+  ::-webkit-scrollbar-thumb:hover { 
+    background: var(--brand-teal-dark); 
+  }
+
+  /* Selección de texto */
+  ::selection {
+    background: var(--brand-teal);
+    color: white;
+  }
+
+  /* Animaciones */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1.2s ease-out forwards;
   }
 </style>

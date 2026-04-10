@@ -34,9 +34,15 @@ export function initHeader() {
     menuBtn!.setAttribute('aria-expanded', (!isOpen).toString());
     
     // Toggle overlay (opacidad + visibilidad)
-    mobileMenu?.classList.toggle('opacity-100', !isOpen);
-    mobileMenu?.classList.toggle('visible', !isOpen);
-    mobileMenu?.classList.toggle('invisible', isOpen);
+    if (!isOpen) {
+      // Abrir menú
+      mobileMenu?.classList.remove('opacity-0', 'invisible');
+      mobileMenu?.classList.add('opacity-100', 'visible');
+    } else {
+      // Cerrar menú
+      mobileMenu?.classList.add('opacity-0', 'invisible');
+      mobileMenu?.classList.remove('opacity-100', 'visible');
+    }
     
     // Toggle sidebar (translate)
     mobileSidebar?.classList.toggle('translate-x-0', !isOpen);
@@ -66,6 +72,14 @@ export function initHeader() {
   // Close con ESC
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menuBtn!.getAttribute('aria-expanded') === 'true') {
+      toggleMobileMenu();
+    }
+  });
+
+  // Close menu on nav link clicks
+  document.addEventListener('click', (e) => {
+    if ((e.target as Element).matches('.mobile-nav-link') && 
+        menuBtn!.getAttribute('aria-expanded') === 'true') {
       toggleMobileMenu();
     }
   });

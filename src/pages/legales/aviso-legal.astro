@@ -1,140 +1,205 @@
 ---
 import Layout_legal from "../../layouts/Layout_legal.astro";
+import { company } from "../../data/company";
+
+const sections = [
+  { id: "titular", title: "1. Titular de la Web", icon: "fa-hospital-user" },
+  { id: "objeto", title: "2. Objeto de la Web", icon: "fa-bullseye" },
+  { id: "propiedad", title: "3. Propiedad Intelectual", icon: "fa-copyright" },
+  { id: "condiciones", title: "4. Condiciones de Uso", icon: "fa-user-check" },
+  { id: "garantias", title: "5. Exclusión de Garantías", icon: "fa-shield-virus" },
+  { id: "responsabilidad", title: "6. Responsabilidad", icon: "fa-exclamation-circle" },
+  { id: "enlaces", title: "7. Enlaces Externos", icon: "fa-external-link-alt" },
+  { id: "legislacion", title: "8. Legislación Aplicable", icon: "fa-gavel" },
+];
+
+const lastUpdated = "10/04/2026";
+const location = "Ayacucho, Perú";
 ---
 
 <Layout_legal
   title="Aviso Legal - Osono Clinic"
-  description="Aviso legal de Osono Clinic. Información sobre el titular y condiciones de uso del sitio web."
+  description="Identificación oficial y condiciones generales de uso del portal Osono Clinic."
 >
-  <section class="legales3">
-    <div class="legales3-content animate-on-scroll animate-scale-in">
-      <h2 class="quote3 text-2xl lg:text-4xl md:text-5xl">
-        "El contenido de esta web es propiedad de Osono Clinic y protegido por
-        ley vigente."
-      </h2>
-      <p class="name">— Osono Clinic</p>
-    </div>
-  </section>
+  <section class="relative bg-slate-50 py-24 pt-32 overflow-hidden">
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <img 
+      src="/img/legales/aviso-legal-bg.png" 
+      alt="Background" 
+      class="w-full h-full object-cover opacity-100 filter grayscale"
+    />
+    
+    <div class="absolute inset-0 bg-linear-to-br from-slate-50/90 via-white/80 to-teal-50/90"></div>
+    <div class="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-white to-transparent"></div>
+    <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-teal-200 rounded-full blur-[120px] animate-pulse opacity-50"></div>
+  </div>
 
-  <section class="py-16 md:py-24 bg-slate-50">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8">
-        Aviso Legal
-      </h1>
+  <div class="relative z-10 max-w-4xl mx-auto px-5 text-center">
+    <h1 class="text-5xl md:text-6xl font-serif text-slate-900 mb-6" data-aos="fade-up">
+     Aviso <span class="text-teal-400 italic">Legal</span>
+    </h1>
+    
+      <p class="text-slate-500 max-w-2xl mx-auto font-light leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
+    Información oficial sobre el titular del dominio y las normas de interacción con nuestros canales digitales bajo el respaldo de <strong>Dharma</strong>.
+    </p>
+    
+    <p class="text-slate-400 max-w-2xl mx-auto font-medium tracking-widest uppercase text-[10px] pt-10" data-aos="fade-up">
+      Última actualización: {lastUpdated} — {location}
+    </p>
+  </div>
+</section>
 
-      <div
-        class="bg-white rounded-3xl shadow-lg border border-slate-100 p-8 md:p-12"
-      >
-        <div class="space-y-8">
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              1. Titular de la Web
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        
+        <aside class="hidden lg:block lg:col-span-4 sticky top-32 h-fit">
+          <div class="border-l-2 border-teal-100 pl-6 space-y-5">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-bold mb-6">Secciones</p>
+            {sections.map((sec) => (
+              <a href={`#${sec.id}`} class="block text-sm text-slate-500 hover:text-teal-600 transition-all hover:translate-x-2 font-medium">
+                {sec.title}
+              </a>
+            ))}
+          </div>
+        </aside>
+
+        <div class="lg:col-span-8">
+
+          <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6 md:mb-8">
+            <a href="/" class="hover:text-teal-600 transition-colors">Inicio</a>
+            <span class="text-gray-300">/</span>
+            <span class="text-gray-700 font-medium">Aviso Legal</span>
+          </nav>
+          
+          <article id="titular" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 shadow-sm">
+                    <i class="fas fa-hospital-user text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-slate-800">1. Titular de la Web</h2>
+            </div>
+            <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i class="fas fa-id-card text-7xl text-teal-900"></i>
+                </div>
+                <p class="text-slate-800 font-bold text-lg mb-4">Osono Clinic (Dharma)</p>
+                <div class="space-y-3 text-slate-600 text-sm">
+                    <p class="flex items-center gap-3"><i class="fas fa-hashtag text-teal-500 w-4"></i> RUC: [PENDIENTE]</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-map-pin text-teal-500 w-4"></i> {company.address.street}, {company.address.city}</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-envelope text-teal-500 w-4"></i> {company.contact.email}</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-phone text-teal-500 w-4"></i> {company.contact.phone}</p>
+                </div>
+            </div>
+          </article>
+
+          <article id="objeto" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-4">
+                <span class="text-teal-500 font-serif opacity-30 text-4xl">02</span> 
+                Objeto de la Web
             </h2>
-            <p class="text-slate-600">
-              <strong>Osono Clinic</strong>, propiedad de <strong>Dharma</strong
-              >.<br />
-              RUC: [XXXXXXX]<br />
-              Dirección: Av. Salud Médica 123, Ciudad Salud<br />
-              Email: contacto@osonoclinic.com<br />
-              Teléfono: +51 997 307 782
+            <p class="text-slate-600 leading-relaxed italic border-l-4 border-teal-500 pl-6 py-2">
+              Esta plataforma tiene como fin proporcionar información veraz sobre la <strong>ozonoterapia</strong> y facilitar el acceso a servicios de medicina regenerativa en la región de Ayacucho.
             </p>
-          </section>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              2. Objeto de la Web
-            </h2>
-            <p class="text-slate-600">
-              Proporcionar información sobre tratamientos de ozonoterapia y
-              facilitar el contacto con especialistas de salud.
+          <article id="propiedad" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">3. Propiedad Intelectual</h2>
+            <p class="text-slate-600 leading-relaxed mb-4">
+              Todo el software, arquitectura visual, textos, fotografías y logos presentes en este portal son propiedad de <strong class="text-teal-800 underline decoration-teal-200">Osono Clinic / Dharma</strong>.
             </p>
-          </section>
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-4 text-sm text-amber-800 rounded-r-xl">
+                <i class="fas fa-exclamation-triangle mr-2"></i> Queda terminantemente prohibida la copia o redistribución de materiales sin permiso explícito.
+            </div>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              3. Propiedad Intelectual
-            </h2>
-            <p class="text-slate-600">
-              Todo el contenido, diseño, imágenes y logos son propiedad de Osono
-              Clinic / Dharma. No se permite copiar, distribuir o modificar el
-              contenido sin autorización previa por escrito.
-            </p>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              4. Condiciones de Uso
-            </h2>
-            <ul class="list-disc list-inside text-slate-600 space-y-2">
-              <li>El uso de la web implica aceptar estas condiciones.</li>
-              <li>
-                Se prohíbe el uso indebido del contenido y el acceso no
-                autorizado.
-              </li>
-              <li>
-                El usuario se compromete a hacer uso lawful de los servicios.
-              </li>
+          <article id="condiciones" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">4. Condiciones de Uso</h2>
+            <ul class="space-y-4">
+                {[
+                  "El acceso a la web es gratuito y voluntario.",
+                  "Se prohíbe el uso de scripts o bots para la extracción de datos.",
+                  "El usuario es responsable de la veracidad de los datos enviados vía formulario."
+                ].map((item) => (
+                    <li class="flex items-start gap-3 text-slate-600 text-sm">
+                        <i class="fas fa-chevron-right text-teal-500 mt-1 text-[10px]"></i>
+                        <span>{item}</span>
+                    </li>
+                ))}
             </ul>
-          </section>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              5. Exclusión de Garantías
+          <article id="garantias" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-4">
+                <span class="text-teal-500 font-serif opacity-30 text-4xl">05</span> 
+                Exclusión de Garantías
             </h2>
-            <p class="text-slate-600">
-              Osono Clinic no garantiza la disponibilidad continua del sitio
-              web. El contenido informativo sobre tratamientos tiene carácter
-              general y no constituye asesoramiento médico específico.
+            <p class="text-slate-600 leading-relaxed">
+              Osono Clinic no garantiza la infalibilidad técnica del sitio ante factores externos. Asimismo, el contenido sobre tratamientos médicos es <strong>estrictamente informativo</strong> y no debe considerarse una prescripción facultativa.
             </p>
-          </section>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              6. Responsabilidad
-            </h2>
-            <p class="text-slate-600">
-              Osono Clinic no se responsabiliza por los daños derivados del uso
-              de la información contenida en este sitio web.
+          <article id="legislacion" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">8. Legislación Aplicable</h2>
+            <p class="text-slate-600 leading-relaxed">
+              Este Aviso Legal se somete a la legislación peruana. Ante cualquier controversia, las partes se someten a la jurisdicción de los jueces y tribunales de la ciudad de <strong class="text-slate-900">Ayacucho</strong>, renunciando a cualquier otro fuero.
             </p>
-          </section>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              7. Enlaces Externos
-            </h2>
-            <p class="text-slate-600">
-              El sitio web puede contener enlaces a terceros. Osono Clinic no
-              controla ni se responsabiliza por el contenido de estos enlaces.
+          <article id="contacto" class="scroll-mt-32" data-aos="fade-up">
+            <div class="bg-slate-900 rounded-[3rem] p-10 md:p-16 relative overflow-hidden shadow-2xl">
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px]"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold text-white mb-6">Consultas Administrativas</h2>
+                    <p class="text-slate-400 mb-10 text-lg leading-relaxed">
+                        Para notificaciones legales o aclaraciones sobre el uso de nuestra marca, contáctenos:
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href={`mailto:${company.contact.email}`} class="flex-1 flex items-center justify-center gap-3 p-4 rounded-2xl bg-teal-600 text-white font-bold hover:bg-teal-500 transition-all group">
+                            <i class="fas fa-envelope"></i>
+                            Enviar Correo
+                        </a>
+                        <a href="/" class="flex-1 flex items-center justify-center gap-3 p-4 rounded-2xl bg-white/5 text-white border border-white/10 hover:bg-white/10 transition-all">
+                            <i class="fas fa-home"></i>
+                            Página Principal
+                        </a>
+                    </div>
+                </div>
+            </div>
+          </article>
+
+           <div class="mt-16 flex justify-center lg:justify-center">
+            <a href="/" class="group flex items-center gap-3 text-slate-400 hover:text-teal-600 transition-all font-bold text-xs uppercase tracking-widest">
+                <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                Volver a Inicio
+            </a>
+          </div>
+
+          <div class="mt-16 flex justify-center lg:justify-start">
+            <p class="text-slate-400 text-[10px] uppercase tracking-widest font-bold">
+                © 2026 Osono Clinic — Ayacucho, Huamanga.
             </p>
-          </section>
+          </div>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">8. Cookies</h2>
-            <p class="text-slate-600">
-              Se aplican cookies para mejorar la experiencia del usuario. Para
-              más información, consulta nuestra
-              <a
-                href="/legales/politica-privacidad"
-                class="text-teal-600 hover:underline">Política de Privacidad</a
-              >.
-            </p>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              9. Legislación Aplicable
-            </h2>
-            <p class="text-slate-600">
-              Este aviso legal se rige por la legislación peruana. Cualquier
-              controversia será resuelta en los tribunales de Lima, Perú.
-            </p>
-          </section>
-        </div>
-
-        <div class="mt-12 pt-8 border-t border-slate-200">
-          <p class="text-sm text-slate-500">Última actualización: 2026</p>
         </div>
       </div>
     </div>
   </section>
 </Layout_legal>
+
+<style>
+  html { scroll-behavior: smooth; }
+  aside a { position: relative; transition: all 0.3s ease; }
+  aside a::before {
+    content: ''; position: absolute; left: -26px; top: 50%;
+    width: 0; height: 2px; background-color: #338B85;
+    transition: width 0.3s ease;
+  }
+  aside a:hover::before { width: 15px; }
+  
+  /* Scrollbar interna para artículos largos */
+  article { border-bottom: 1px solid #f1f5f9; padding-bottom: 3rem; }
+  article:last-of-type { border-bottom: none; }
+</style>

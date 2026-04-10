@@ -1,126 +1,208 @@
 ---
 import Layout_legal from "../../layouts/Layout_legal.astro";
+import { company } from "../../data/company";
+
+const sections = [
+  { id: "responsable", title: "1. Responsable del Tratamiento", icon: "fa-user-tie" },
+  { id: "datos", title: "2. Datos que Recogemos", icon: "fa-database" },
+  { id: "finalidad", title: "3. Finalidad del Tratamiento", icon: "fa-bullseye" },
+  { id: "comparticion", title: "4. Compartición de Datos", icon: "fa-share-nodes" },
+  { id: "derechos", title: "5. Derechos ARCO", icon: "fa-shield-halved" },
+  { id: "seguridad", title: "6. Seguridad de la Información", icon: "fa-lock" },
+  { id: "cookies", title: "7. Política de Cookies", icon: "fa-cookie-bite" },
+  { id: "contacto", title: "8. Soporte de Privacidad", icon: "fa-user-shield" },
+];
+
+const lastUpdated = "10/04/2026";
+const location = "Ayacucho, Perú";
 ---
 
 <Layout_legal
   title="Política de Privacidad - Osono Clinic"
-  description="Política de privacidad de Osono Clinic. Descubre cómo protectemos tus datos personales."
+  description="Conozca cómo protegemos y gestionamos sus datos personales en Osono Clinic y Dharma."
 >
-  <section class="legales1">
-    <div class="legales1-content animate-on-scroll animate-scale-in">
-      <h2 class="quote1 text-2xl lg:text-4xl md:text-5xl">
-        "Tus datos personales están protegidos y se usan únicamente para fines
-        informativos y legales."
-      </h2>
-      <p class="name">— Osono Clinic</p>
-    </div>
-  </section>
+  <section class="relative bg-slate-50 py-24 pt-32 overflow-hidden">
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <img 
+      src="/img/legales/privacy-bg.png" 
+      alt="Background" 
+      class="w-full h-full object-cover opacity-100 filter grayscale"
+    />
+    
+    <div class="absolute inset-0 bg-linear-to-br from-slate-50/90 via-white/80 to-teal-50/90"></div>
+    <div class="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-white to-transparent"></div>
+    <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-teal-200 rounded-full blur-[120px] animate-pulse opacity-50"></div>
+  </div>
 
-  <section class="py-16 md:py-24 bg-slate-50">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8">
-        Política de Privacidad
-      </h1>
+  <div class="relative z-10 max-w-4xl mx-auto px-5 text-center">
 
-      <div
-        class="bg-white rounded-3xl shadow-lg border border-slate-100 p-8 md:p-12"
-      >
-        <p class="text-lg text-slate-600 mb-8">
-          En <strong>Osono Clinic</strong>, propiedad de <strong>Dharma</strong
-          >, respetamos tu privacidad. Al utilizar nuestro sitio web aceptas
-          nuestra política de privacidad.
-        </p>
+    <h1 class="text-5xl md:text-6xl font-serif text-slate-900 mb-6" data-aos="fade-up">
+      Política de <span class="text-teal-600">Privacidad</span>
+    </h1>
+    <p class="text-slate-500 max-w-2xl mx-auto font-light leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
+      En Osono Clinic, la confidencialidad de su historial médico y datos personales es nuestra prioridad bajo los estándares éticos de Dharma.
+    </p>
+    <p class="text-slate-400 max-w-2xl mx-auto font-medium tracking-widest uppercase text-[10px] pt-10" data-aos="fade-up">
+      Última actualización: {lastUpdated} — {location}
+    </p>
+  </div>
+</section>
 
-        <div class="space-y-8">
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              1. Responsable del Tratamiento
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        
+        <aside class="hidden lg:block lg:col-span-4 sticky top-32 h-fit">
+          <div class="border-l-2 border-teal-100 pl-6 space-y-5">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-bold mb-6">Contenido</p>
+            {sections.map((sec) => (
+              <a href={`#${sec.id}`} class="block text-sm text-slate-500 hover:text-teal-600 transition-all hover:translate-x-2 font-medium">
+                {sec.title}
+              </a>
+            ))}
+          </div>
+        </aside>
+
+        <div class="lg:col-span-8">
+
+          <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6 md:mb-8">
+            <a href="/" class="hover:text-teal-600 transition-colors">Inicio</a>
+            <span class="text-gray-300">/</span>
+            <span class="text-gray-700 font-medium">Politica De Privacidad</span>
+          </nav>
+          
+          <article id="responsable" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 shadow-sm">
+                    <i class="fas fa-user-tie text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-slate-800">1. Responsable del Tratamiento</h2>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
+                <p class="text-slate-700 font-bold mb-2">Osono Clinic (Grupo Dharma)</p>
+                <ul class="space-y-2 text-slate-600 text-sm">
+                    <li><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i> {company.address.street}, {company.address.city}</li>
+                    <li><i class="fas fa-envelope text-teal-500 mr-2"></i> {company.contact.email}</li>
+                    <li><i class="fas fa-phone text-teal-500 mr-2"></i> {company.contact.phone}</li>
+                </ul>
+            </div>
+          </article>
+
+          <article id="datos" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-4">
+                <span class="text-teal-500 font-serif opacity-30 text-4xl">02</span> 
+                Datos que Recogemos
             </h2>
-            <p class="text-slate-600">
-              <strong>Osono Clinic (Dharma)</strong><br />
-              Dirección: Av. Salud Médica 123, Ciudad Salud<br />
-              Email: contacto@osonoclinic.com<br />
-              WhatsApp: +51 997 307 782
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { t: "Identificación", d: "Nombre, apellidos y DNI para registro médico." },
+                  { t: "Contacto", d: "Teléfono de WhatsApp y correo electrónico." },
+                  { t: "Salud", d: "Información sobre consultas y antecedentes médicos." },
+                  { t: "Navegación", d: "Cookies técnicas para mejorar su experiencia." }
+                ].map((item) => (
+                    <div class="p-5 border border-slate-100 rounded-2xl hover:bg-teal-50/30 transition-colors">
+                        <p class="font-bold text-slate-800 text-sm mb-1">{item.t}</p>
+                        <p class="text-slate-500 text-xs leading-relaxed">{item.d}</p>
+                    </div>
+                ))}
+            </div>
+          </article>
+
+          <article id="finalidad" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">3. Finalidad del Tratamiento</h2>
+            <p class="text-slate-600 leading-relaxed mb-6">
+              Sus datos son tratados con la exclusiva finalidad de:
             </p>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              2. Datos que Recogemos
-            </h2>
-            <ul class="list-disc list-inside text-slate-600 space-y-2">
-              <li>Nombre y contacto (WhatsApp, email) mediante formularios.</li>
-              <li>Información sobre consultas médicas previas.</li>
-              <li>Cookies para mejorar la experiencia del usuario.</li>
+            <ul class="space-y-4">
+                {[
+                  "Gestionar citas y responder consultas médicas.",
+                  "Enviar recordatorios de tratamiento vía WhatsApp.",
+                  "Informar sobre nuevos servicios en medicina regenerativa.",
+                  "Cumplir con las normativas de salud vigentes en Perú."
+                ].map((text) => (
+                    <li class="flex items-start gap-3 text-slate-600 text-sm">
+                        <i class="fas fa-check-circle text-teal-500 mt-1"></i>
+                        <span>{text}</span>
+                    </li>
+                ))}
             </ul>
-          </section>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              3. Finalidad del Tratamiento
+          <article id="derechos" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-4">
+                <span class="text-teal-500 font-serif opacity-30 text-4xl">05</span> 
+                Derechos ARCO
             </h2>
-            <ul class="list-disc list-inside text-slate-600 space-y-2">
-              <li>Responder consultas y agendar citas.</li>
-              <li>
-                Enviar información relevante sobre tratamientos y promociones.
-              </li>
-              <li>Mejorar nuestros servicios y la experiencia del usuario.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              4. Compartición de Datos
-            </h2>
-            <p class="text-slate-600">
-              No vendemos ni compartimos tus datos con terceros comerciales.
-              Podemos usar proveedores de servicios como WhatsApp para la
-              gestión de consultas.
+            <p class="text-slate-600 leading-relaxed mb-6">
+              Usted tiene derecho a <strong>Acceder, Rectificar, Cancelar u Oponerse</strong> al tratamiento de sus datos. 
             </p>
-          </section>
+            <div class="bg-teal-900 text-white p-8 rounded-4xl shadow-xl shadow-teal-900/10">
+                <p class="text-sm opacity-90 mb-4">Para ejercer estos derechos, envíe una solicitud firmada adjuntando copia de su DNI a:</p>
+                <p class="font-mono text-teal-300 font-bold">{company.contact.email}</p>
+            </div>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              5. Derechos del Usuario
-            </h2>
-            <p class="text-slate-600">
-              Puedes acceder, rectificar, cancelar u oponerte al tratamiento de
-              tus datos enviando un correo a contacto@osonoclinic.com.
+          <article id="cookies" class="mb-20 scroll-mt-32" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">7. Política de Cookies</h2>
+            <p class="text-slate-600 leading-relaxed">
+              Osono Clinic utiliza cookies para asegurar el funcionamiento técnico de la web. Estas pequeñas piezas de información nos permiten entender cómo interactúa con nuestro contenido y mejorar la carga del sitio. Usted puede gestionar o bloquear las cookies desde la configuración de su navegador.
             </p>
-          </section>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">6. Seguridad</h2>
-            <p class="text-slate-600">
-              Implementamos medidas técnicas y organizativas para proteger tus
-              datos personales.
-            </p>
-          </section>
+          <article id="contacto" class="scroll-mt-32" data-aos="fade-up">
+            <div class="bg-slate-900 rounded-[3rem] p-10 md:p-16 relative overflow-hidden shadow-2xl shadow-teal-900/20">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Privacidad y <span class="text-teal-500">Confianza</span></h2>
+                    <p class="text-slate-400 mb-10 text-lg font-light leading-relaxed">
+                        Si tiene dudas sobre cómo manejamos su información sensible, nuestro Oficial de Protección de Datos le atenderá directamente.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <a href={`mailto:${company.contact.email}`} class="flex items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-teal-500/50 transition-all duration-500 group">
+                            <div class="w-12 h-12 bg-teal-500 rounded-2xl flex items-center justify-center text-slate-900 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-teal-500 font-bold uppercase tracking-widest">Protección de Datos</span>
+                                <span class="text-white text-sm">{company.contact.email}</span>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10">
+                            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Estado</span>
+                                <span class="text-white text-sm">Cumplimiento Ley 29733</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </article>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">7. Cookies</h2>
-            <p class="text-slate-600">
-              Utilizamos cookies para funcionalidad básica. Puedes desactivarlas
-              en tu navegador si lo deseas. Al navegar por nuestro sitio,
-              aceptas el uso de cookies conforme a esta política.
-            </p>
-          </section>
+          <div class="mt-16 flex justify-center lg:justify-center">
+            <a href="/" class="group flex items-center gap-3 text-slate-400 hover:text-teal-600 transition-all font-bold text-xs uppercase tracking-widest">
+                <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                Volver a Inicio
+            </a>
+          </div>
 
-          <section>
-            <h2 class="text-xl font-bold text-slate-900 mb-3">
-              8. Cambios en la Política
-            </h2>
-            <p class="text-slate-600">
-              La política de privacidad puede actualizarse. Te informaremos de
-              cambios significativos en nuestro sitio web.
-            </p>
-          </section>
-        </div>
-
-        <div class="mt-12 pt-8 border-t border-slate-200">
-          <p class="text-sm text-slate-500">Última actualización: 2026</p>
         </div>
       </div>
     </div>
   </section>
 </Layout_legal>
+
+<style>
+  html { scroll-behavior: smooth; }
+  aside a { position: relative; transition: all 0.3s ease; }
+  aside a::before {
+    content: ''; position: absolute; left: -26px; top: 50%;
+    width: 0; height: 2px; background-color: #338B85;
+    transition: width 0.3s ease;
+  }
+  aside a:hover::before { width: 15px; }
+</style>
