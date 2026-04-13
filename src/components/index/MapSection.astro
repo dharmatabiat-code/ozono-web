@@ -2,10 +2,21 @@
 import { company } from "../../data/company";
 ---
 
-<section class="relative p-12 pt-0 pb-0 md:py-20 bg-white">
+<section class="relative p-12 pt-0 pb-10 md:py-20 bg-white">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#338B85]/5 rounded-full blur-3xl"></div>
-    <div class="relative rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white group">
-      <div class="absolute top-6  left-6 z-20 hidden md:block max-w-xs">
+    
+    <div 
+      class="relative rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white group"
+      data-aos="zoom-in-up" 
+      data-aos-duration="1000"
+    >
+      
+      <div 
+        class="absolute top-6 left-6 z-20 hidden md:block max-w-xs"
+        data-aos="fade-right"
+        data-aos-delay="600"
+        data-aos-anchor-placement="top-bottom"
+      >
         <div class="bg-white/95 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-slate-100">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 bg-[#338B85] text-white rounded-xl flex items-center justify-center">
@@ -28,7 +39,7 @@ import { company } from "../../data/company";
 
       <div class="relative h-112.5 md:h-150 w-full grayscale-[0.2] contrast-[1.1] group-hover:grayscale-0 transition-all duration-700">
         <iframe 
-          src= {company.address.mapLink} 
+          src={company.address.mapLink} 
           width="100%" 
           height="100%" 
           style="border:0;" 
@@ -40,7 +51,6 @@ import { company } from "../../data/company";
       </div>
       <div class="absolute inset-0 bg-transparent pointer-events-none md:hidden"></div>
     </div>
-  </div>
 </section>
 
 <style>

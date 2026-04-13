@@ -5,6 +5,7 @@ import FooterServices from "./footer/FooterServices.astro";
 import FooterContact from "./footer/FooterContact.astro";
 import FooterSocial from "./footer/FooterSocial.astro";
 
+
 interface Props {
   logoSrc?: string;
   logoAlt?: string;
@@ -53,30 +54,38 @@ const {
   <div class="max-w-350 mx-auto px-6 py-12 md:py-16">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
       
-      <FooterLogo 
-        logoSrc={logoSrc} 
-        logoAlt={logoAlt} 
-        title="Ozonoterapia Médica" 
-        description={description} 
-      />
+      <div data-aos="fade-up" data-aos-delay="100">
+        <FooterLogo 
+          logoSrc={logoSrc} 
+          logoAlt={logoAlt} 
+          title="Ozonoterapia Médica" 
+          description={description} 
+        />
+      </div>
 
-      <FooterServices title="Servicios" servicesItems={ServicesItems} />
+      <div data-aos="fade-up" data-aos-delay="200">
+        <FooterServices title="Servicios" servicesItems={ServicesItems} />
+      </div>
 
-      <FooterContact 
-        address={`${address.street}<br/>${address.colony}, ${address.city}`} 
-        phone={phone} 
-        email={email} 
-      />
+      <div data-aos="fade-up" data-aos-delay="300">
+        <FooterContact 
+          address={`${address.street}<br/>${address.colony}, ${address.city}`} 
+          phone={phone} 
+          email={email} 
+        />
+      </div>
 
-     <FooterSocial 
-        socialLinks={socialLinks} 
-        whatsappUrl={company.contact?.linkWhatsapp} 
-      />
+      <div data-aos="fade-up" data-aos-delay="400">
+        <FooterSocial 
+          socialLinks={socialLinks} 
+          whatsappUrl={company.contact?.linkWhatsapp} 
+        />
+      </div>
 
     </div>
   </div>
 
-  <div class="border-t border-slate-800/50">
+  <div class="border-t border-slate-800/50" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="0">
     <div class="max-w-350 mx-auto px-6 py-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
        <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
@@ -104,22 +113,4 @@ const {
     </div>
   </div>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Osono Clinic",
-    "description": description,
-    "image": logoSrc,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": address.street,
-      "addressLocality": address.city,
-      "addressRegion": "Ayacucho",
-      "addressCountry": "PE"
-    },
-    "telephone": phone,
-    "email": email,
-    "openingHours": "Mo-Sa 09:00-20:00",
-    "sameAs": socialLinks.map(s => s.url)
-  })} />
-</footer>
+  </footer>

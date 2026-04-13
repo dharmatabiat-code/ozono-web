@@ -8,7 +8,7 @@ import { company } from "../../data/company";
     
     <div class="grid lg:grid-cols-2 gap-16 items-start">
       
-      <div class="relative">
+      <div class="relative" data-aos="fade-right">
         <div class="sticky top-24">
           <div class="inline-flex items-center gap-2 mb-4">
             <span class="w-10 h-1 bg-linear-to-r from-[#338B85] to-teal-200 rounded-full"></span>
@@ -21,13 +21,14 @@ import { company } from "../../data/company";
             Entendemos que cada paciente es único. Aquí respondemos las consultas más frecuentes sobre nuestros protocolos internacionales.
           </p>
 
-          <div class="relative group hidden lg:block">
+          <div class="relative group hidden lg:block" data-aos="zoom-in" data-aos-delay="200">
             <div class="absolute -inset-4 bg-[#338B85]/5 rounded-[3rem] blur-2xl group-hover:bg-[#338B85]/10 transition-all duration-500"></div>
             <img 
               src="/img/home/faq-doctor.png" 
               alt="Dra. Amalia Luque atendiendo paciente" 
-              class="relative rounded-[2.5rem] shadow-2xl border-8 border-white object-cover w-full h-100"
+              class="relative rounded-[2.5rem] shadow-2xl border-8 border-white object-cover w-full h-100 transition-transform duration-700 group-hover:scale-[1.02]"
             />
+            
             <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce-slow">
               <div class="w-12 h-12 bg-[#338B85]/10 rounded-full flex items-center justify-center">
                 <i class="fa-solid fa-user-doctor text-[#338B85]"></i>
@@ -42,8 +43,12 @@ import { company } from "../../data/company";
       </div>
 
       <div class="space-y-4 faq-container">
-        {faqs.map((faq) => (
-          <div class="faq-item group border border-slate-100 rounded-2xl bg-slate-50 overflow-hidden transition-all duration-300 hover:border-[#338B85]/30 hover:bg-white">
+        {faqs.map((faq, index) => (
+          <div 
+            class="faq-item group border border-slate-100 rounded-2xl bg-slate-50 overflow-hidden transition-all duration-300 hover:border-[#338B85]/30 hover:bg-white hover:shadow-lg hover:shadow-slate-200/50"
+            data-aos="fade-left"
+            data-aos-delay={index * 100}
+          >
             <details class="group">
               <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
                 <span class="font-bold text-slate-800 pr-4 group-open:text-[#338B85] transition-colors text-base">
@@ -62,18 +67,22 @@ import { company } from "../../data/company";
           </div>
         ))}
 
-        <div class="mt-12 p-8 bg-slate-900 rounded-4xl relative overflow-hidden">
+        <div 
+          class="mt-12 p-8 bg-slate-900 rounded-4xl relative overflow-hidden shadow-2xl"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           <div class="relative z-10">
             <h4 class="font-bold text-white text-lg mb-2">¿Aún tienes dudas?</h4>
             <p class="text-white/60 text-xs mb-6">Escríbenos y un especialista te responderá pronto.</p>
             <a 
-              href= {company.contact.linkWhatsapp}
+              href={company.contact.linkWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-3 px-6 py-3 bg-[#338B85] text-white font-bold rounded-xl text-sm hover:bg-[#2c7570] transition-all"
+              class="inline-flex items-center gap-3 px-6 py-3 bg-[#338B85] text-white font-bold rounded-xl text-sm hover:bg-[#2c7570] transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[#338B85]/20"
             >
               <i class="fa-brands fa-whatsapp"></i>
-              WhatsApp
+              WhatsApp Directo
             </a>
           </div>
           <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-[#338B85]/20 rounded-full blur-2xl"></div>

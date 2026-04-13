@@ -9,7 +9,7 @@ import { benefits } from "../../data/benefits";
 
   <div class="relative z-10 max-w-350 mx-auto px-6">
     
-    <div class="max-w-3xl mb-16 lg:mb-24">
+    <div class="max-w-3xl mb-16 lg:mb-24" data-aos="fade-right">
       <div class="flex items-center gap-3 mb-5">
         <span class="w-10 h-1 bg-linear-to-r from-[#338B85] to-teal-200 rounded-full"></span>
         <span class="text-[#338B85] font-bold uppercase tracking-[0.2em] text-xs">
@@ -20,21 +20,25 @@ import { benefits } from "../../data/benefits";
         Resultados Reales para una <br class="hidden md:block"/> 
         <span class="text-[#338B85]">Salud Transformada</span>
       </h2>
-      <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+      <p class="mt-6 text-slate-400 text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
         La medicina integrativa no solo trata el síntoma, restaura el equilibrio biológico 
         de tu organismo mediante procesos naturales y científicos.
       </p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 lg:gap-x-12">
-      {benefits.map((benefit) => (
-        <div class="group relative">
+      {benefits.map((benefit, index) => (
+        <div 
+          class="group relative" 
+          data-aos="fade-up" 
+          data-aos-delay={index * 100}
+        >
           <span class="absolute -top-6 -left-2 text-7xl md:text-8xl font-black text-white/3 group-hover:text-[#338B85]/10 transition-colors duration-500 select-none">
             {benefit.number}
           </span>
 
           <div class="relative z-10">
-            <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-[#338B85]/50 group-hover:bg-[#338B85]/10 transition-all duration-500">
+            <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-[#338B85]/50 group-hover:bg-[#338B85]/10 transition-all duration-500 group-hover:rotate-6">
               <i class={`${benefit.icon} text-2xl text-[#338B85]`}></i>
             </div>
 
@@ -52,10 +56,10 @@ import { benefits } from "../../data/benefits";
       ))}
     </div>
 
-    <div class="mt-20 flex justify-center">
-        <div class="inline-flex items-center gap-6 p-2 pl-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
+    <div class="mt-20 flex justify-center" data-aos="zoom-in" data-aos-delay="400">
+        <div class="inline-flex items-center gap-6 p-2 pl-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full hover:border-[#338B85]/30 transition-colors">
             <span class="text-white/70 text-sm font-medium hidden sm:block">¿Listo para recuperar tu bienestar?</span>
-            <a href="#contacto" class="px-6 py-3 bg-[#338B85] hover:bg-[#2c7570] text-white text-sm font-bold rounded-full transition-all">
+            <a href="#contacto" class="px-6 py-3 bg-[#338B85] hover:bg-[#2c7570] text-white text-sm font-bold rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[#338B85]/20">
                 Agenda tu cita ahora
             </a>
         </div>

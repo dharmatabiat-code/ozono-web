@@ -138,24 +138,39 @@ const faqSchema = {
     <script>
       import AOS from "aos";
 
-      const handleLoader = () => {
-        const loader = document.getElementById("preloader");
-        if (loader) {
-          window.addEventListener("load", () => {
-            setTimeout(() => {
-              loader.classList.add("opacity-0", "pointer-events-none");
-              initAOS();
-            }, 400); // Un poco más de tiempo para elegancia
-          });
-        }
-      };
+      // Dentro de tu <script> en el Layout
+        const handleLoader = () => {
+          const loader = document.getElementById("preloader");
+          const body = document.body; // Referencia al body
+
+          if (loader) {
+            window.addEventListener("load", () => {
+              setTimeout(() => {
+                loader.classList.add("opacity-0", "pointer-events-none");
+                
+                // DISPARADOR: Añadimos la clase cuando la carga termina
+                body.classList.add("is-loaded");
+                
+                initAOS();
+              }, 400); 
+            });
+          }
+        };
 
       const initAOS = () => {
         AOS.init({
           duration: 1000,
           once: true,
           offset: 120,
+          disable: false, // Habilitar en todos los dispositivos
         });
+
+        // En móvil, cambiar todas las animaciones a fade-up para no afectar el responsive
+        if (window.innerWidth < 768) {
+          document.querySelectorAll('[data-aos]').forEach(el => {
+            el.setAttribute('data-aos', 'fade-up');
+          });
+        }
       };
 
       handleLoader();
