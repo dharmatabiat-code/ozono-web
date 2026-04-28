@@ -3,7 +3,7 @@ export const company = {
   tagline: "Expertos en Ozonoterapia Médica y Regenerativa",
   description: "Líderes en tratamientos avanzados con ozono medicinal. Aliviamos el dolor crónico y potenciamos tu sistema inmunológico con terapias de vanguardia diseñadas para restaurar tu bienestar desde la raíz.",
   address: {
-    street: "Av. Principal 123",
+    street: "Av. Los Jardines, Cuadra - 3",
     colony: "San Juan Baustista",
     city: "Huamanga",
     state: "Ayacucho",
