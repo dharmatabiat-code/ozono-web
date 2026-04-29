@@ -26,7 +26,7 @@ const {
 
 // Build full URL
 const siteUrl = seo.site.url;
-const defaultImage = "/logos/logo-osono.png";
+const defaultImage = "/img/head/logo.png";
 
 // --- SCHEMAS (JSON-LD) NIVEL DHARMA ---
 const organizationSchema = {
@@ -98,6 +98,11 @@ const faqSchema = {
     <meta name="author" content={seo.meta.author} />
     <meta name="keywords" content={seo.meta.keywords.join(", ")} />
     <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="es" href={canonicalURL} />
+    <link rel="alternate" hreflang="en" href={canonicalURL.replace(/\/$/, '') + '/en/'} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL} />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />

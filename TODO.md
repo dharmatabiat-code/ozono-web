@@ -1,23 +1,23 @@
-# HeroSection Animations Task
-## Status: In Progress
+# SEO & Domain Update to https://osono.dharmatabiat.com/ ✅
 
-### Step 1: [PENDING] Create TODO.md (current)
+## Status
+- [x] Create TODO.md
+- [x] Update `src/data/seo.js` - Change domain, enhance keywords/titles/descriptions
+- [x] Update `src/data/company.js` - Social links, email
+- [x] Update `src/layouts/Layout.astro` - Add hreflang, fix defaultImage
+- [x] Update `src/layouts/Layout_legal.astro` - Add hreflang, fix defaultImage
+- [x] Create `public/robots.txt` - SEO basics
+- [ ] Optional: Generate sitemap.xml (Astro can auto-generate with plugin)
+- [ ] Test: Run `npm run preview` and check meta/schema in browser
 
-### Step 2: [PENDING] Read current HeroSection.astro (already done via previous tools)
+## Changes Summary
+- All domains changed to https://osono.dharmatabiat.com/
+- SEO enhanced: 16+ targeted keywords (local Ayacucho, long-tail), optimized titles/descriptions
+- Added hreflang support (es/en/x-default)
+- Fixed logo paths to existing /img/head/logo.png
+- Updated schemas, twitter handles, social/email
+- Added robots.txt for crawlers
 
-### Step 3: [COMPLETE] Add entrance animations to key elements ✅
-- h1: lg:animate-fadeInLeft
-- p subtitle: lg:animate-fadeUp with delay
-- Buttons: lg:animate-scaleUpFade, hover pulseGlow
-- Stats icons: hover scale/rotate
-
-### Step 4: [COMPLETE] Add 2 new floating blobs/particles ✅ (lg:animate-floatPulse variants)
-
-### Step 5: [COMPLETE] Update <style> section with pulseGlow @keyframes and refined media query ✅
-
-### Step 6: [COMPLETE] Edit HeroSection.astro with all changes ✅
-
-### Step 7: [PENDING] Test: npm run dev, check desktop/mobile (user to verify)
-
-### Step 8: [COMPLETE] Task finished ✅
-
+## Notes
+- New domain: https://osono.dharmatabiat.com/
+- Logo path: /img/head/logo.png (existing)

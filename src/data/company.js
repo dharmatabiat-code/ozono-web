@@ -9,11 +9,12 @@ export const company = {
     state: "Ayacucho",
     zip: "00000",
     country: "Perú",
-    mapLink: "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d971.2106238429621!2d-74.204524!3d-13.172329!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDEwJzIwLjIiUyA3NMKwMTInMTYuOSJX!5e0!3m2!1ses-419!2spe!4v1775487644312!5m2!1ses-419!2spe"
+    mapLink: "https://maps.app.goo.gl/iS3R6LaLrdkSKqWw9",
+    mapFrame: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d971.2110566565997!2d-74.2054192!3d-13.1722199!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x911287945d7c776b%3A0x989834262cc07273!2sPediatr%C3%ADa%20Dharma!5e0!3m2!1ses-419!2spe!4v1777475090819!5m2!1ses-419!2spe"
   },
   contact: {
     phone: "+51 997 307 782",
-    email: "info@osono.co",
+    email: "info@osono.dharmatabiat.com",
     whatsapp: "+51 997 307 782",
     linkWhatsapp: "https://wa.me/51997307782"
   },
@@ -27,12 +28,12 @@ export const company = {
     }
   },
   social: {
-    facebook: "https://facebook.com/osono",
-    instagram: "https://instagram.com/osono",
-    twitter: "https://twitter.com/osono",
-    tiktok: "https://tiktok.com/@osono",
-    youtube: "https://youtube.com/osono",
-    linkedin: "https://linkedin.com/company/osono"
+    facebook: "https://facebook.com/osonodharma",
+    instagram: "https://instagram.com/osonodharma", 
+    twitter: "https://twitter.com/osonodharma",
+    tiktok: "https://tiktok.com/@osonodharma",
+    youtube: "https://youtube.com/@osonodharma",
+    linkedin: "https://linkedin.com/company/osono-dharmatabiat"
   },
   stats: {
     patients: "5000+",

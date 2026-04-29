@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://osono.dharmatabiat.com/sitemap-index.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Bing specific  
+User-agent: Bingbot
+Allow: /
+
+# Allow structured data crawling
+User-agent: Google-Structured-Data-Testing-Tool
+Allow: /

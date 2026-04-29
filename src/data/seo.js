@@ -1,37 +1,41 @@
 export const seo = {
   site: {
-    name: "Osono Clinic | Ozonoterapia Médica en Ayacucho",
-    url: "https://osonoclinic.pe", // Actualizado a .pe para SEO local en Perú
+    name: "Osono Clinic | Ozonoterapia by Dharma Tabiat",
+    url: "https://osono.dharmatabiat.com/", // Updated to new domain
     locale: "es_PE",
     language: "es",
     languageAlternate: "en"
   },
   meta: {
     title: {
-      default: "Osono Clinic | Ozonoterapia Médica y Tratamiento del Dolor en Ayacucho",
-      home: "Osono Clinic | Especialistas en Ozonoterapia y Hernias Discales en Ayacucho",
-      services: "Tratamientos Médicos con Ozono | Alivio del Dolor y Regeneración | Osono Clinic",
-      contact: "Agenda tu Cita Médica | Osono Clinic Ayacucho"
+      default: "Osono Clinic - Dharma Tabiat | Ozonoterapia Médica Ayacucho",
+      home: "Osono Clinic | Especialistas Ozonoterapia & Hernias Discales Ayacucho - Dharma Tabiat",
+      services: "Tratamientos Ozono Médico | Dolor Crónico & Regeneración | Osono Dharma Ayacucho",
+      contact: "Agenda Cita Ozonoterapia | Osono Clinic Dharma Tabiat Ayacucho"
     },
     description: {
-      default: "Clínica líder en ozonoterapia médica en Ayacucho. Especialistas en tratamiento del dolor, hernias discales, artrosis y revitalización inmunológica. Medicina de vanguardia en San Juan Bautista.",
-      home: "Recupera tu movilidad sin cirugía. En Osono Clinic Ayacucho somos expertos en ozonoterapia medicinal para hernias discales, dolor crónico y bienestar integral. ¡Agenda tu evaluación hoy!",
-      services: "Descubre el poder del ozono medicinal: Tratamientos para el dolor de columna, pie diabético, medicina estética y sueroterapia en Ayacucho.",
-      contact: "Consulta con nuestros especialistas en Ayacucho. Ubicados en San Juan Bautista, Huamanga. Atención personalizada para tu recuperación."
+      default: "Osono Clinic by Dharma Tabiat: Líderes en ozonoterapia médica Ayacucho. Tratamiento dolor, hernias discales, artrosis. San Juan Bautista, Huamanga.",
+      home: "Osono Dharma Tabiat Ayacucho: Ozonoterapia para hernias discales, dolor crónico sin cirugía. Especialistas en regeneración celular. ¡Agenda ahora!",
+      services: "Ozono medicinal en Osono Dharma: Dolor columna, pie diabético, sueroterapia, medicina estética Ayacucho Huamanga.",
+      contact: "Agenda cita ozonoterapia Osono Clinic Dharma Tabiat. Especialistas Ayacucho, San Juan Bautista Huamanga. Recuperación personalizada."
     },
     keywords: [
-      "ozonoterapia en ayacucho",
+      "ozonoterapia ayacucho",
+      "osono dharmatabiat",
+      "ozonoterapia dharmatabiat ayacucho",
       "tratamiento hernias discales ayacucho",
-      "clinica del dolor huamanga",
-      "ozono medicinal peru",
-      "tratamiento artrosis ayacucho",
-      "pie diabetico ayacucho",
-      "medicina regenerativa huamanga",
-      "sueroterapia ayacucho",
-      "autohemoterapia ayacucho",
-      "alivio dolor de espalda ayacucho",
-      "san juan bautista huamanga salud",
-      "especialistas en ozono peru"
+      "clinica ozonoterapia huamanga",
+      "tratamiento dolor cronico ayacucho",
+      "ozono medicinal san juan bautista",
+      "medicina regenerativa ayacucho",
+      "sueroterapia dharmatabiat",
+      "pie diabetico ozonoterapia ayacucho",
+      "artrosis tratamiento ozono huamanga",
+      "alivio dolor espalda ayacucho",
+      "hernias discales sin cirugia ayacucho",
+      "especialistas ozono dharma tabiat",
+      "clinica dolor huamanga",
+      "ozonoterapia medica peru"
     ],
     author: "Osono Clinic - Especialistas en Ozono",
     publisher: "Osono Clinic",
@@ -51,25 +55,25 @@ export const seo = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@osonoclinic",
-    creator: "@osonoclinic"
+    site: "@osonodharma",
+    creator: "@osonodharma"
   },
   schema: {
     organization: {
-      name: "Osono Clinic",
-      url: "https://osonoclinic.pe",
-      logo: "https://osonoclinic.pe/logos/logo-osono.png",
-      description: "Líderes en Ozonoterapia Médica y Bioregenerativa en el sur del Perú.",
+      name: "Osono Clinic by Dharma Tabiat",
+      url: "https://osono.dharmatabiat.com/",
+      logo: "https://osono.dharmatabiat.com/img/head/logo.png",
+      description: "Osono Clinic desarrollada por Dharma Tabiat: Líderes en Ozonoterapia Médica y Bioregenerativa en Ayacucho y sur del Perú.",
       sameAs: [
-        "https://facebook.com/osonoclinic",
-        "https://instagram.com/osonoclinic",
-        "https://tiktok.com/@osonoclinic"
+        "https://facebook.com/osonodharma",
+        "https://instagram.com/osonodharma",
+        "https://tiktok.com/@osonodharma"
       ]
     },
     medicalClinic: {
-      name: "Osono Clinic - Ozonoterapia Ayacucho",
-      description: "Centro médico especializado en tratamientos con ozono para hernias discales y regeneración celular.",
-      priceRange: "$$", // Cambiado a $$ para ser más accesible y competitivo
+      name: "Osono Clinic Dharma Tabiat - Ozonoterapia Ayacucho",
+      description: "Centro médico especializado en ozonoterapia para hernias discales, dolor crónico y regeneración celular en San Juan Bautista, Huamanga.",
+      priceRange: "S/.",
       paymentAccepted: ["Efectivo", "Tarjeta de Crédito", "Transferencia", "Yape", "Plin"],
       currenciesAccepted: "PEN"
     }
