@@ -1,12 +1,12 @@
-# Osono Clinic - Website de Ozonoterapia Médica
+# Ozono Clinic - Website de Ozonoterapia Médica
 
-![Osono Clinic](public/img/head/logo.png)
+![Ozono Clinic](public/img/head/logo.png)
 
-> Sitio web oficial de Osono Clinic - Especialistas en Ozonoterapia Médica y Regenerativa
+> Sitio web oficial de Ozono Clinic - Especialistas en Ozonoterapia Médica y Regenerativa
 
 ## 🏥 Acerca del Proyecto
 
-Osono Clinic es una clínica médica especializada en **ozonoterapia**, ofreciendo tratamientos avanzados para el dolor crónico, hernias discales y bienestar inmunológico. El sitio web está construido con [Astro](https://astro.build) para garantizar máximo rendimiento y SEO.
+Ozono Clinic es una clínica médica especializada en **ozonoterapia**, ofreciendo tratamientos avanzados para el dolor crónico, hernias discales y bienestar inmunológico. El sitio web está construido con [Astro](https://astro.build) para garantizar máximo rendimiento y SEO.
 
 ### Características Principales
 
@@ -174,7 +174,7 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 ```bash
 # Clonar el repositorio
 git clone <repo-url>
-cd Osono-Web
+cd Ozono-Web
 
 # Instalar dependencias
 npm install
@@ -203,7 +203,7 @@ npm run preview
 El sitio incluye meta tags optimizados:
 
 ```html
-<title>Osono Clinic | Expertos en Ozonoterapia Médica y Regenerativa</title>
+<title>Ozono Clinic | Expertos en Ozonoterapia Médica y Regenerativa</title>
 <meta name="description" content="Tratamientos avanzados de ozonoterapia para dolor crónico, hernias discales y bienestar inmunológico." />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#0d9488" />
@@ -244,7 +244,7 @@ El sitio incluye disclaimers en:
 
 ## 📄 Licencia
 
-© 2026 Osono Clinic. Todos los derechos reservados.
+© 2026 Ozono Clinic. Todos los derechos reservados.
 
 ---
 
@@ -252,8 +252,8 @@ El sitio incluye disclaimers en:
 
 - **Dirección**: Av. Salud Médica 123, Ciudad Salud
 - **Teléfono**: +51 997 307 782
-- **Email**: contacto@osonoclinic.com
-- **Web**: [www.osonoclinic.com](#)
+- **Email**: contacto@ozonoclinic.com
+- **Web**: [www.ozonoclinic.com](#)
 
 ---
 

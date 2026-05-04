@@ -1,4 +1,4 @@
-# SEO & Domain Update to https://osono.dharmatabiat.com/ ✅
+# SEO & Domain Update to https://ozono.dharmatabiat.com/ ✅
 
 ## Status
 - [x] Create TODO.md
@@ -11,7 +11,7 @@
 - [ ] Test: Run `npm run preview` and check meta/schema in browser
 
 ## Changes Summary
-- All domains changed to https://osono.dharmatabiat.com/
+- All domains changed to https://ozono.dharmatabiat.com/
 - SEO enhanced: 16+ targeted keywords (local Ayacucho, long-tail), optimized titles/descriptions
 - Added hreflang support (es/en/x-default)
 - Fixed logo paths to existing /img/head/logo.png
@@ -19,5 +19,5 @@
 - Added robots.txt for crawlers
 
 ## Notes
-- New domain: https://osono.dharmatabiat.com/
+- New domain: https://ozono.dharmatabiat.com/
 - Logo path: /img/head/logo.png (existing)

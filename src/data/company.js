@@ -1,5 +1,5 @@
 export const company = {
-  name: "Osono Clinic",
+  name: "Ozono Clinic",
   tagline: "Expertos en Ozonoterapia Médica y Regenerativa",
   description: "Líderes en tratamientos avanzados con ozono medicinal. Aliviamos el dolor crónico y potenciamos tu sistema inmunológico con terapias de vanguardia diseñadas para restaurar tu bienestar desde la raíz.",
   address: {
@@ -14,7 +14,7 @@ export const company = {
   },
   contact: {
     phone: "+51 997 307 782",
-    email: "info@osono.dharmatabiat.com",
+    email: "info@ozono.dharmatabiat.com",
     whatsapp: "+51 997 307 782",
     linkWhatsapp: "https://wa.me/51997307782"
   },
@@ -28,12 +28,12 @@ export const company = {
     }
   },
   social: {
-    facebook: "https://facebook.com/osonodharma",
-    instagram: "https://instagram.com/osonodharma", 
-    twitter: "https://twitter.com/osonodharma",
-    tiktok: "https://tiktok.com/@osonodharma",
-    youtube: "https://youtube.com/@osonodharma",
-    linkedin: "https://linkedin.com/company/osono-dharmatabiat"
+    facebook: "https://facebook.com/ozonodharma",
+    instagram: "https://instagram.com/ozonodharma", 
+    twitter: "https://twitter.com/ozonodharma",
+    tiktok: "https://tiktok.com/@ozonodharma",
+    youtube: "https://youtube.com/@ozonodharma",
+    linkedin: "https://linkedin.com/company/ozono-dharmatabiat"
   },
   stats: {
     patients: "5000+",

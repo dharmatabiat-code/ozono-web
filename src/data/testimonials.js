@@ -3,7 +3,7 @@ export const testimonials = [
     id: 1,
     name: "María García",
     treatment: "Tratamiento de Hernia Discal",
-    comment: "Llegué a Osono con un dolor lumbar que no me dejaba dormir. Después de las infiltraciones de ozono, el dolor desapareció casi por completo. ¡Evité la cirugía!",
+    comment: "Llegué a Ozono con un dolor lumbar que no me dejaba dormir. Después de las infiltraciones de ozono, el dolor desapareció casi por completo. ¡Evité la cirugía!",
     rating: 5,
     image: null
   },
