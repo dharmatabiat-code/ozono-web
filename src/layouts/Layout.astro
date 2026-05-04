@@ -26,7 +26,7 @@ const {
 
 // Build full URL
 const siteUrl = seo.site.url;
-const defaultImage = "/img/head/logo.png";
+const defaultImage = "/icon.png";
 
 // --- SCHEMAS (JSON-LD) NIVEL DHARMA ---
 const organizationSchema = {
@@ -34,7 +34,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: seo.schema.organization.name,
   url: siteUrl,
-  logo: siteUrl + "/logos/icono.png",
+  logo: siteUrl + "/head/ozono.png",
   sameAs: seo.schema.organization.sameAs,
   contactPoint: {
     "@type": "ContactPoint",
@@ -49,8 +49,8 @@ const medicalClinicSchema = {
   name: seo.schema.medicalClinic.name,
   description: seo.schema.medicalClinic.description,
   url: siteUrl,
-  logo: siteUrl + "/logos/icono.png",
-  image: siteUrl + "/img/clinica-fachada.jpg",
+  logo: siteUrl + "/img/head/ozono.png",
+  image: siteUrl + "/img/home/tratamiento.png",
   priceRange: seo.schema.medicalClinic.priceRange,
   address: {
     "@type": "PostalAddress",
