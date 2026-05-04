@@ -53,7 +53,7 @@ c:/Practicas Pediatria - 2026-10/GIt Dharma/Astro Ozono Clinic/Ozono-Web/
 │       ├── global.css                 # Tailwind + vars colores (#338B85 teal)
 │       ├── dr-quote.css               # Quotes/blocks
 │       └── styles/legales/legales.css # Legales específicos
-├── astro.config.mjs                  # Site: https://ozono.dharmatabiat.com/, sitemap(), Tailwind
+├── astro.config.mjs                  # Site: https://ozonoclinic.dharmatabiat.com/, sitemap(), Tailwind
 ├── package.json                      # Astro 5.17, Tailwind 4.2, @astrojs/sitemap
 ├── tsconfig.json
 ├── README.md                         # Este archivo 👈
@@ -127,7 +127,7 @@ npm run build
 - Hero: `public/img/home/ozono_baner.png`
 
 ### SEO (Verificado)
-- Domain: https://ozono.dharmatabiat.com/
+- Domain: https://ozonoclinic.dharmatabiat.com/
 - Hreflang: es_PE / en
 - Robots.txt: Presente
 - Schema: Organization + MedicalClinic

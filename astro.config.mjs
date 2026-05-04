@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://ozono.dharmatabiat.com/', 
+  site: 'https://ozonoclinic.dharmatabiat.com/', 
 
   integrations: [sitemap()],
 

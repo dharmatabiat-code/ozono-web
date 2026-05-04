@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ozono.dharmatabiat.com/sitemap-index.xml
+Sitemap: https://ozonoclinic.dharmatabiat.com/sitemap-index.xml
 
 # Google specific
 User-agent: Googlebot

@@ -14,7 +14,7 @@ export const company = {
   },
   contact: {
     phone: "+51 997 307 782",
-    email: "info@ozono.dharmatabiat.com",
+    email: "info@ozonoclinic.dharmatabiat.com",
     whatsapp: "+51 997 307 782",
     linkWhatsapp: "https://wa.me/51997307782"
   },

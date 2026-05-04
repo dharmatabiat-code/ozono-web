@@ -1,7 +1,7 @@
 export const seo = {
   site: {
     name: "Ozono Clinic | Ozonoterapia by Dharma Tabiat",
-    url: "https://ozono.dharmatabiat.com/", // Updated to new domain
+    url: "https://ozonoclinic.dharmatabiat.com/", // Updated to new domain
     locale: "es_PE",
     language: "es",
     languageAlternate: "en"
@@ -61,8 +61,8 @@ export const seo = {
   schema: {
     organization: {
       name: "Ozono Clinic by Dharma Tabiat",
-      url: "https://ozono.dharmatabiat.com/",
-      logo: "https://ozono.dharmatabiat.com/img/head/logo.png",
+      url: "https://ozonoclinic.dharmatabiat.com/",
+      logo: "https://ozonoclinic.dharmatabiat.com/img/head/logo.png",
       description: "Ozono Clinic desarrollada por Dharma Tabiat: Líderes en Ozonoterapia Médica y Bioregenerativa en Ayacucho y sur del Perú.",
       sameAs: [
         "https://facebook.com/ozonodharma",
