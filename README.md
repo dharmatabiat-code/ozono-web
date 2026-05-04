@@ -1,280 +1,158 @@
-# Ozono Clinic - Website de Ozonoterapia Médica
+# Ozono Clinic - Website Oficial de Ozonoterapia Médica
 
-![Ozono Clinic](public/img/head/logo.png)
+![Logo Ozono Clinic](public/img/head/ozono.png)
 
-> Sitio web oficial de Ozono Clinic - Especialistas en Ozonoterapia Médica y Regenerativa
+> **Ozono Clinic by Dharma Tabiat** - Especialistas en Ozonoterapia Médica y Regenerativa en Ayacucho. Tratamientos para dolor crónico, hernias discales, pie diabético y más.
 
-## 🏥 Acerca del Proyecto
+*Documentación completamente actualizada: $(date)*
 
-Ozono Clinic es una clínica médica especializada en **ozonoterapia**, ofreciendo tratamientos avanzados para el dolor crónico, hernias discales y bienestar inmunológico. El sitio web está construido con [Astro](https://astro.build) para garantizar máximo rendimiento y SEO.
+## 🏥 Sobre el Proyecto
 
-### Características Principales
+Sitio web desarrollado con **Astro 5.17** para máximo rendimiento, SEO optimizado y carga ultra-rápida. Diseño responsivo mobile-first con Tailwind CSS 4 y animaciones AOS.
 
-- 🌿 Diseño moderno y profesional para clínica médica
-- 📱 Totalmente responsivo (mobile-first)
-- ⚡ Alto rendimiento con Astro
-- 🎨 Integración con Tailwind CSS
-- 🔍 Optimizado para SEO
-- 💬 Integración con WhatsApp
+### Características Clave
+- ⚡ **Rendimiento**: Astro + Tailwind Vite + Sharp images
+- 📱 **Responsivo**: Mobile-first, componentes adaptativos
+- 🔍 **SEO Avanzado**: Schema.org, hreflang (es/en), sitemap auto, robots.txt
+- 🎨 **Diseño Médico**: Colores teal/red, Plus Jakarta Sans
+- 💬 **Interactividad**: Form contact TS, testimonial slider, header scroll effects, WhatsApp
+- 🛡️ **Páginas Legales**: Layout separado con header/footer optimizados
 
----
+## 📁 Estructura Actual del Proyecto
 
-## 🚀 Estructura del Proyecto
-
-```text
-/
-├── public/                      # Archivos estáticos
-│   ├── img/
-│   │   ├── head/              # Logotipos
-│   │   │   ├── logo.png
-│   │   │   └── logo2.png
-│   │   └── home/              # Imágenes del home
-│   │       ├── baner.png
-│   │       ├── baner2.png
-│   │       ├── ozono_baner.png
-│   │       └── ozonoterapia.jpg
-│   ├── favicon.ico
-│   ├── favicon.svg
-│   └── icon.png
-│
+```
+c:/Practicas Pediatria - 2026-10/GIt Dharma/Astro Ozono Clinic/Ozono-Web/
+├── public/                           # Archivos públicos/estáticos
+│   ├── favicon.ico, icon.png, logo.jpg, robots.txt
+│   ├── img/head/                     # Logos (logo.png, ozono.png, etc.)
+│   ├── img/home/                     # Hero/banners (ozono_baner.png, tratamiento.png, etc.)
+│   └── img/legales/                  # Backgrounds legales
 ├── src/
-│   ├── assets/                 # Assets compilados
-│   │   ├── astro.svg
-│   │   └── background.svg
-│   │
-│   ├── components/             # Componentes reutilizables
-│   │   ├── Header.astro        # Navegación con efectos scroll
-│   │   ├── Footer.astro        # Pie de página completo
-│   │   └── Welcome.astro      # Componente de bienvenida
-│   │
-│   ├── layouts/                # Plantillas base
-│   │   └── Layout.astro       # Layout principal HTML
-│   │
-│   ├── pages/                  # Páginas del sitio
-│   │   └── index.astro        # Página principal
-│   │
-│   ├── styles/                 # Estilos CSS
-│   │   ├── global.css         # Estilos globales y Tailwind
-│   │   └── index.css          # Estilos específicos del home
-│   │
-│   └── js/                     # Scripts JavaScript
-│       └── main.js             # Funcionalidades principales
-│
-├── astro.config.mjs           # Configuración de Astro
-├── package.json               # Dependencias del proyecto
-├── tsconfig.json              # Configuración de TypeScript
-└── README.md                  # Este archivo
+│   ├── assets/                       # Astro assets (astro.svg, background.svg)
+│   ├── components/                   # Componentes Astro reutilizables
+│   │   ├── Header.astro, Footer.astro, Welcome.astro
+│   │   ├── components/footer/        # Footer subcomps (FooterContact, FooterLogo, etc.)
+│   │   ├── components/header/        # Header subcomps (NavDesktop/Mobile)
+│   │   ├── components/index/         # Secciones home (HeroSection, ServiciosSection, FAQ, Testimonials, etc.)
+│   │   └── components/legales/       # Header/Footer legales dedicados
+│   ├── data/                         # Datos dinámicos JS
+│   │   ├── company.js                # Contacto, address Ayacucho, socials @ozonodharma
+│   │   ├── seo.js                    # Meta, OG, Twitter, schema MedicalClinic
+│   │   ├── services.js, benefits.js, faq.js, testimonials.js
+│   ├── layouts/                      # Plantillas base
+│   │   ├── Layout.astro              # Layout principal (con SEO data)
+│   │   └── Layout_legal.astro        # Layout páginas legales
+│   ├── pages/                        # Páginas Astro
+│   │   ├── index.astro               # Home con 10+ secciones
+│   │   └── pages/legales/            # 3 páginas (aviso-legal, politica-privacidad, terminos-condiciones)
+│   ├── scripts/                      # TypeScript interactividad
+│   │   ├── contact-form.ts
+│   │   ├── header.ts
+│   │   └── testimonial-slider.ts
+│   └── styles/                       # CSS custom
+│       ├── global.css                 # Tailwind + vars colores (#338B85 teal)
+│       ├── dr-quote.css               # Quotes/blocks
+│       └── styles/legales/legales.css # Legales específicos
+├── astro.config.mjs                  # Site: https://ozono.dharmatabiat.com/, sitemap(), Tailwind
+├── package.json                      # Astro 5.17, Tailwind 4.2, @astrojs/sitemap
+├── tsconfig.json
+├── README.md                         # Este archivo 👈
+└── TODO.md                           # Tareas pendientes/SEO updates
 ```
 
----
+## 🛠️ Stack Técnico
 
-## 🛠️ Tecnologías Utilizadas
+| Categoría | Tecnologías |
+|-----------|-------------|
+| **Framework** | Astro 5.17 |
+| **CSS** | Tailwind CSS 4.2 (Vite plugin) |
+| **Images** | Astro Sharp service |
+| **Animaciones** | AOS 2.3 |
+| **SEO** | @astrojs/sitemap, schema.org MedicalClinic |
+| **Scripts** | TypeScript (header effects, forms, sliders) |
+| **Tipografía** | Google Fonts: Plus Jakarta Sans |
 
-| Tecnología | Propósito |
-|------------|-----------|
-| **Astro** | Framework principal |
-| **Tailwind CSS** | Estilos y utility classes |
-| **Font Awesome** | Iconos |
-| **Google Fonts** | Tipografía (Plus Jakarta Sans) |
+**Colores Principales**: Teal `#338B85` (primary), `#2f7c77` (dark), Red `#ef4444`.
 
----
+## 📋 Contenido del Sitio
 
-## 📋 Secciones del Sitio
+### Home (src/pages/index.astro)
+1. **HeroSection**: Banner ozono_baner.png, CTA WhatsApp
+2. **About/OzonoterapiaSection**: Explicación tratamiento
+3. **ServiciosSection**: Autohemoterapia, Columna, Pie Diabético (data/services.js)
+4. **BenefitsSection**: Lista beneficios (data/benefits.js)
+5. **Planes/QuoteSection**: Precios packs
+6. **FAQSection**: Acordeón (data/faq.js)
+7. **TestimonialsSection**: Slider (data/testimonials.js, testimonial-slider.ts)
+8. **Contacto/MapSection**: Form + Google Maps
+9. **DireccionMedicaSection**: Credenciales médicas
 
-### Páginas Legales
-El sitio incluye páginas legales en `/legales/`:
-- `/legales/politica-privacidad` - Política de Privacidad
-- `/legales/terminos-servicio` - Términos de Servicio
-- `/legales/aviso-legal` - Aviso Legal
+### Páginas Legales (`src/pages/legales/*.astro`)
+- aviso-legal.astro, politica-privacidad.astro, terminos-condiciones.astro
+- Layout_legal.astro con header/footer legales dedicados
 
-Cada página legal utiliza el layout `Layout_legal.astro` que incluye su propio header y footer optimizado.
-
-### 1. Hero Section
-- Banner principal con imagen de fondo
-- Título: "Una vida sin dolor es posible"
-- Subtítulo sobre ozonoterapia médica
-- Botones de llamada a la acción
-- Beneficios destacados (Sin cirugía, Recuperación rápida, Protocolos Alemanes)
-
-### 2. ¿Qué es la Ozonoterapia?
-- Explicación del tratamiento
-- Cómo actúa en el organismo (4 puntos clave)
-- Beneficios clínicos observados
-- Disclaimer médico
-
-### 3. Servicios/Terapias
-- **Autohemoterapia Mayor**: Oxigenación profunda sistémica
-- **Tratamiento de Columna**: Para hernias discales y dolor lumbar
-- **Pie Diabético y Heridas**: Acción bactericida y regenerativa
-
-### 4. Planes de Tratamiento
-- Sesión Individual ($45)
-- Pack Recuperación ($200/5 sesiones) - *Más Popular*
-- Plan Regenerativo ($360/10 sesiones)
-
-### 5. ¿Por qué elegirnos?
-- Ciencia Aplicada (equipos grado médico)
-- Especialistas capacitados
-- Seguridad y biocompatibilidad
-- Resultados desde primeras sesiones
-
-### 6. FAQ (Preguntas Frecuentes)
-- 4 preguntas con respuestas en formato acordeón
-- Información sobre dolor, sesiones, seguridad y duración
-
-### 7. Contacto
-- Formulario de contacto
-- Información de ubicación
-- Botón flotante de WhatsApp
-
----
-
-## 🎨 Sistema de Diseño
-
-### Colores Principales
-
-| Color | Hex | Uso |
-|-------|-----|-----|
-| Teal Primary | `#338B85` | Color principal, acentos |
-| Teal Dark | `#2f7c77` | Hover states |
-| Red Accent | `##ef4444` | Acentos estratégicos |
-| Slate Dark | `#0f172a` | Textos oscuros |
-| Slate Light | `#f8fafc` | Fondos |
-
-### Tipografía
-
-- **Familia**: Plus Jakarta Sans
-- **Pesos**: 400, 500, 600, 700, 800
-
----
-
-## ⚙️ Comandos Disponibles
-
-Todos los comandos se ejecutan desde la raíz del proyecto:
-
-| Comando | Acción |
-|---------|--------|
-| `npm install` | Instalar dependencias |
-| `npm run dev` | Iniciar servidor dev en `localhost:4321` |
-| `npm run build` | Construir para producción en `./dist/` |
-| `npm run preview` | Previsualizar build local |
-| `npm run astro -- --help` | Ayuda CLI de Astro |
-
----
-
-## 🔧 Desarrollo
-
-### Requisitos Previos
-
-- Node.js 18.x o superior
-- npm 9.x o superior
-
-### Instalación
+## 🚀 Comandos
 
 ```bash
-# Clonar el repositorio
-git clone <repo-url>
-cd Ozono-Web
-
-# Instalar dependencias
-npm install
-
-# Iniciar desarrollo
-npm run dev
+npm install          # Dependencias
+npm run dev          # Dev server: http://localhost:4321
+npm run build        # Build producción → ./dist/ (incluye sitemap.xml auto)
+npm run preview      # Preview build local
 ```
 
-### Build para Producción
+**Sitemap**: Auto-generado en build gracias a `@astrojs/sitemap()`.
 
+## ☁️ Despliegue
+
+### Netlify/Vercel (Recomendado)
+1. Conectar repo GitHub
+2. Build command: `npm run build`
+3. Output dir: `dist`
+4. Domain: ozono.dharmatabiat.com
+
+### Custom Server
 ```bash
 npm run build
-# Los archivos se generan en ./dist/
+# Servir ./dist/ con nginx/Apache
 ```
 
-### Preview del Build
+## ⚙️ Configuración & Personalización
 
-```bash
-npm run preview
-```
+### Datos Dinámicos
+- `src/data/company.js`: Dirección Ayacucho (Av. Los Jardines, San Juan Bautista), +51 997 307 782, socials
+- `src/data/seo.js`: Keywords locales (ozonoterapia ayacucho, hernias discales), schema
 
----
+### Imágenes
+- Logos: `public/img/head/logo.png` (usado en layouts)
+- Hero: `public/img/home/ozono_baner.png`
 
-## 📱 Configuración SEO
+### SEO (Verificado)
+- Domain: https://ozono.dharmatabiat.com/
+- Hreflang: es_PE / en
+- Robots.txt: Presente
+- Schema: Organization + MedicalClinic
 
-El sitio incluye meta tags optimizados:
+## 🔧 Troubleshooting
 
-```html
-<title>Ozono Clinic | Expertos en Ozonoterapia Médica y Regenerativa</title>
-<meta name="description" content="Tratamientos avanzados de ozonoterapia para dolor crónico, hernias discales y bienestar inmunológico." />
-<meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#0d9488" />
-```
+| Problema | Solución |
+|----------|----------|
+| Estilos rotos | `npm run dev` (Tailwind HMR) |
+| TS errors | `tsc --noEmit` |
+| Images no optim | Sharp auto en build |
+| Sitemap missing | Verificar `integrations: [sitemap()]` en config |
 
----
+## 📞 Datos de Contacto (de company.js)
+- **Tel/WhatsApp**: +51 997 307 782
+- **Email**: info@ozono.dharmatabiat.com
+- **Ubicación**: Av. Los Jardines Cdra 3, San Juan Bautista, Huamanga, Ayacucho
+- **Socials**: @ozonodharma (FB/IG/TikTok/Twitter)
 
-## 🔄 Personalización
-
-### Cambiar Logo
-
-1. Reemplazar `/public/img/head/logo.png` con el nuevo logo
-2. Asegurar que las dimensiones sean apropiadas (se adapta automáticamente)
-
-### Modificar Colores
-
-Los colores principales están definidos en:
-- `src/styles/global.css` (variables CSS)
-- También puedes buscar y reemplazar `#338B85` en los archivos `.astro`
-
-### Actualizar Información de Contacto
-
-Editar en:
-- `src/components/Footer.astro` - Información del pie de página
-- `src/pages/index.astro` - Sección de contacto
-
----
-
-## ⚠️ Disclaimer Médico
-
-El sitio incluye disclaimers en:
-- Sección de beneficios clínicos
-- Pie de página
-
-> *La ozonoterapia es un tratamiento complementario. Debe ser aplicado por profesionales de salud capacitados. Los resultados pueden variar según cada paciente y diagnóstico clínico.*
-
----
+## ⚠️ Disclaimer
+Tratamientos complementarios por especialistas. Resultados varían. © 2026 Ozono Clinic - Dharma Tabiat.
 
 ## 📄 Licencia
-
-© 2026 Ozono Clinic. Todos los derechos reservados.
-
----
-
-## 📞 Contacto
-
-- **Dirección**: Av. Salud Médica 123, Ciudad Salud
-- **Teléfono**: +51 997 307 782
-- **Email**: contacto@ozonoclinic.com
-- **Web**: [www.ozonoclinic.com](#)
+Propiedad de Dharma Tabiat. No distribuir sin permiso.
 
 ---
 
-## 🐛 Problemas Comunes
-
-### El servidor no inicia
-```bash
-# Verificar que las dependencias estén instaladas
-npm install
-
-# Limpiar cache
-npm run astro -- clean
-```
-
-### Imágenes no cargan
-Verificar que las rutas en `/public/` sean correctas y que los archivos existan.
-
-### Estilos no se aplican
-Asegurarse de que Tailwind CSS esté correctamente configurado en `astro.config.mjs`.
-
----
-
-*Documentación actualizada: 2026*
-
+**Próximos Pasos**: Revisar TODO.md, build/test, deploy.
