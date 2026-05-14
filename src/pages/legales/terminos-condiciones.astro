@@ -13,7 +13,6 @@ const sections = [
   { id: "contacto", title: "8. Contacto Legal", icon: "fa-envelope-open-text" },
 ];
 
-
 const lastUpdated = "10/04/2026";
 const location = "Ayacucho, Perú";
 ---
@@ -22,67 +21,63 @@ const location = "Ayacucho, Perú";
   title="Términos de Servicio - Ozono Clinic"
   description="Términos y condiciones de uso del sitio web de Ozono Clinic y Dharma."
 >
+  <!-- Hero Section -->
   <section class="relative bg-slate-50 py-24 pt-32 overflow-hidden">
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <img 
-      src="/img/legales/terms-bg.png" 
-      alt="Background" 
-      class="w-full h-full object-cover opacity-100 filter grayscale"
-    />
-    
-    <div class="absolute inset-0 bg-linear-to-br from-slate-50/90 via-white/80 to-teal-50/90"></div>
-    <div class="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-white to-transparent"></div>
-    <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-teal-200 rounded-full blur-[120px] animate-pulse opacity-50"></div>
-  </div>
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <img 
+        src="/img/legales/terms-bg.png" 
+        alt="Background" 
+        class="w-full h-full object-cover opacity-20 filter grayscale"
+      />
+      <div class="absolute inset-0 bg-linear-to-br from-slate-50/90 via-white/80 to-teal-50/90"></div>
+      <div class="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-white to-transparent"></div>
+      <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-teal-200 rounded-full blur-[120px] animate-pulse opacity-40"></div>
+    </div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-5 text-center">
-
-     <h1 class="text-5xl md:text-6xl font-serif text-slate-900 mb-6" data-aos="fade-up">
-     Términos de <span class="text-teal-400">Servicio</span>
-    </h1>
-    
-   <p class="text-slate-500 max-w-2xl mx-auto font-light leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
-      Establecemos pautas de transparencia y ética profesional para su tratamiento de ozonoterapia en Ayacucho.
-    </p>
-    
-    <p class="text-slate-400 max-w-2xl mx-auto font-medium tracking-widest uppercase text-[10px] pt-10" data-aos="fade-up">
-      Última actualización: {lastUpdated} — {location}
-    </p>
-  </div>
-</section>
+    <div class="relative z-10 max-w-4xl mx-auto px-5 text-center">
+      <h1 class="text-5xl md:text-6xl font-serif text-slate-900 mb-6" data-aos="fade-up">
+        Términos de <span class="text-teal-600">Servicio</span>
+      </h1>
+      <p class="text-slate-500 max-w-2xl mx-auto font-light leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
+        Establecemos pautas de transparencia y ética profesional para su tratamiento de ozonoterapia en Ayacucho.
+      </p>
+      <p class="text-slate-400 max-w-2xl mx-auto font-medium tracking-widest uppercase text-[10px] pt-10" data-aos="fade-up">
+        Última actualización: {lastUpdated} — {location}
+      </p>
+    </div>
+  </section>
 
   <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-5">
+    <div class="max-w-7xl mx-auto px-5">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
         
+        <!-- Navigation Sidebar -->
         <aside class="hidden lg:block lg:col-span-4 sticky top-32 h-fit">
           <div class="border-l-2 border-teal-100 pl-6 space-y-5">
             <p class="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-bold mb-6">Navegación</p>
             {sections.map((sec) => (
-              <a href={`#${sec.id}`} class="block text-sm text-slate-500 hover:text-teal-600 transition-all hover:translate-x-2 font-medium">
+              <a href={`#${sec.id}`} class="nav-link block text-sm text-slate-500 hover:text-teal-600 transition-all hover:translate-x-2 font-medium">
                 {sec.title}
               </a>
             ))}
           </div>
         </aside>
 
+        <!-- Content Area -->
         <div class="lg:col-span-8">
-
-           <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6 md:mb-8">
+          <nav class="flex items-center gap-2 text-sm text-gray-500 mb-8">
             <a href="/" class="hover:text-teal-600 transition-colors">Inicio</a>
             <span class="text-gray-300">/</span>
             <span class="text-gray-700 font-medium">Términos de Servicio</span>
           </nav>
           
           <article id="aceptacion" class="mb-20 scroll-mt-32" data-aos="fade-up">
-            <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 shadow-sm">
-                    <i class="fas fa-file-contract text-xl"></i>
-                </div>
-                <h2 class="text-2xl font-bold text-slate-800">1. Aceptación de Términos</h2>
-            </div>
-            <p class="text-slate-600 leading-relaxed">
-              Al utilizar el sitio web de <strong class="text-teal-700">Ozono Clinic</strong> (propiedad de Dharma), usted reconoce haber leído, entendido y aceptado cumplir con estos Términos de Servicio. El uso de esta plataforma implica la aceptación de nuestras políticas operativas y legales.
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-4">
+              <span class="text-teal-500 font-serif opacity-30 text-4xl">01</span> 
+              Aceptación de Términos
+            </h2>
+            <p class="text-slate-600 leading-relaxed bg-slate-50 p-6 rounded-3xl border-l-4 border-teal-500">
+              Al utilizar el sitio web de <strong class="text-teal-700 font-bold">Ozono Clinic</strong>, usted reconoce haber leído, entendido y aceptado cumplir con estos Términos de Servicio. El uso de esta plataforma implica la aceptación de nuestras políticas operativas y éticas de Dharma.
             </p>
           </article>
 
@@ -92,30 +87,33 @@ const location = "Ayacucho, Perú";
                 Servicios Médicos
             </h2>
             <p class="text-slate-600 leading-relaxed mb-6">
-              Nuestra plataforma proporciona información especializada sobre ozonoterapia. Todos los tratamientos están sujetos a:
+              Nuestra plataforma proporciona información sobre medicina regenerativa. Todos los tratamientos están sujetos a:
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <p class="text-sm font-semibold text-teal-800 mb-1">Evaluación Médica</p>
-                    <p class="text-xs text-slate-500">Es obligatoria una consulta previa con nuestros especialistas.</p>
+                <div class="p-5 bg-white border border-slate-100 rounded-2xl hover:border-teal-200 hover:bg-teal-50/30 transition-all">
+                    <p class="text-sm font-bold text-teal-800 mb-2">Evaluación Médica</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Es obligatoria una consulta presencial con especialistas colegiados para diagnosticar cada caso.</p>
                 </div>
-                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <p class="text-sm font-semibold text-teal-800 mb-1">Protocolos de Salud</p>
-                    <p class="text-xs text-slate-500">Seguimos estándares internacionales de seguridad clínica.</p>
+                <div class="p-5 bg-white border border-slate-100 rounded-2xl hover:border-teal-200 hover:bg-teal-50/30 transition-all">
+                    <p class="text-sm font-bold text-teal-800 mb-2">Protocolos Dharma</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Seguimos estándares internacionales de seguridad en la aplicación de ozono medicinal.</p>
                 </div>
             </div>
           </article>
 
           <article id="responsabilidades" class="mb-20 scroll-mt-32" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-slate-800 mb-6">3. Responsabilidades del Usuario</h2>
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-4">
+              <span class="text-teal-500 font-serif opacity-30 text-4xl">03</span> 
+              Responsabilidades del Usuario
+            </h2>
             <ul class="space-y-4">
                 {[
-                  "No utilizar la web para fines ilegales, spam o fraude.",
-                  "Respetar la propiedad intelectual del contenido e imágenes.",
-                  "Proporcionar información veraz en los formularios de contacto."
+                  "No utilizar la web para fines fraudulentos o de suplantación.",
+                  "Respetar la autoría de los contenidos clínicos publicados.",
+                  "Proporcionar datos veraces para la programación de citas."
                 ].map((item) => (
                     <li class="flex items-start gap-3 text-slate-600 text-sm">
-                        <i class="fas fa-user-check text-teal-500 mt-1"></i>
+                        <i class="fas fa-check-circle text-teal-500 mt-1"></i>
                         <span>{item}</span>
                     </li>
                 ))}
@@ -127,38 +125,40 @@ const location = "Ayacucho, Perú";
                 <span class="text-teal-500 font-serif opacity-30 text-4xl">04</span> 
                 Limitación de Responsabilidad
             </h2>
-            <div class="bg-slate-900 text-slate-300 p-8 rounded-4xl border border-slate-800 leading-relaxed">
-                <p class="text-sm mb-4">
-                    Ozono Clinic no garantiza resultados médicos definitivos basados únicamente en la información de esta web. La ozonoterapia es un tratamiento <span class="text-white font-bold">complementario</span>.
+            <div class="bg-slate-900 text-slate-300 p-8 rounded-[2.5rem] relative overflow-hidden border border-slate-800">
+                <p class="text-sm mb-4 relative z-10 leading-relaxed">
+                  Ozono Clinic no garantiza resultados mágicos. La ozonoterapia es un tratamiento <span class="text-white font-bold">médico-científico</span> que varía según la respuesta biológica de cada paciente.
                 </p>
-                <p class="text-sm italic border-l-2 border-teal-500 pl-4">
-                    La información aquí publicada no sustituye el diagnóstico de un profesional de salud colegiado.
+                <p class="text-xs italic text-teal-500 relative z-10">
+                  La información web es orientativa y no reemplaza la opinión médica directa.
                 </p>
+                <i class="fas fa-exclamation-triangle absolute -right-4 -bottom-4 text-8xl text-white/5"></i>
             </div>
           </article>
 
+          <!-- Propiedad e Impuestos -->
           <article id="propiedad" class="mb-20 scroll-mt-32" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-slate-800 mb-6">5. Propiedad Intelectual</h2>
-            <p class="text-slate-600 leading-relaxed">
-              Todo el contenido, incluyendo el software, textos, marcas y diseños, pertenece a <strong class="text-slate-900">Ozono Clinic / Dharma</strong>. Queda prohibida la reproducción total o parcial sin autorización expresa por escrito.
-            </p>
-          </article>
-
-          <article id="modificaciones" class="mb-20 scroll-mt-32" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-slate-800 mb-6">6. Modificaciones</h2>
-            <p class="text-slate-600 leading-relaxed">
-              Nos reservamos el derecho de actualizar, modificar o eliminar contenido de la web y de estos términos en cualquier momento para adaptarnos a nuevas normativas legales en Perú.
+             <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-4">
+              <span class="text-teal-500 font-serif opacity-30 text-4xl">05</span> 
+              Propiedad Intelectual
+            </h2>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Todo el material visual, logotipos y textos son propiedad exclusiva de <strong class="text-slate-900">Ozono Clinic / Dharma</strong>. Se prohíbe el uso de nuestra marca sin consentimiento previo.
             </p>
           </article>
 
           <article id="ley" class="mb-20 scroll-mt-32" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-slate-800 mb-6">7. Ley Aplicable</h2>
-            <p class="text-slate-600 leading-relaxed">
-                Estos términos se rigen bajo las leyes de la República del Perú. Cualquier controversia será resuelta en los fueros judiciales de la ciudad de <strong class="text-slate-900">Ayacucho, Huamanga</strong>.
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-4">
+              <span class="text-teal-500 font-serif opacity-30 text-4xl">07</span> 
+              Ley Aplicable
+            </h2>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Estos términos se rigen por las leyes peruanas. Para cualquier discrepancia, las partes se someten a la jurisdicción de los jueces y tribunales de la ciudad de <strong class="text-slate-900">Ayacucho, Huamanga</strong>.
             </p>
           </article>
 
-          <article id="contacto" class="scroll-mt-32" data-aos="fade-up">
+          <!-- Legal Contact CTA -->
+         <article id="contacto" class="scroll-mt-32" data-aos="fade-up">
             <div class="bg-slate-900 rounded-[3rem] p-10 md:p-16 relative overflow-hidden shadow-2xl shadow-teal-900/20">
                 <div class="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
                 
@@ -192,7 +192,8 @@ const location = "Ayacucho, Perú";
             </div>
           </article>
 
-           <div class="mt-16 flex justify-center lg:justify-center">
+          <!-- Footer Action -->
+          <div class="mt-16 flex justify-center">
             <a href="/" class="group flex items-center gap-3 text-slate-400 hover:text-teal-600 transition-all font-bold text-xs uppercase tracking-widest">
                 <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
                 Volver a Inicio
@@ -207,11 +208,11 @@ const location = "Ayacucho, Perú";
 
 <style>
   html { scroll-behavior: smooth; }
-  aside a { position: relative; transition: all 0.3s ease; }
-  aside a::before {
+  .nav-link { position: relative; transition: all 0.3s ease; }
+  .nav-link::before {
     content: ''; position: absolute; left: -26px; top: 50%;
-    width: 0; height: 2px; background-color: #338B85;
+    width: 0; height: 2px; background-color: #0d9488;
     transition: width 0.3s ease;
   }
-  aside a:hover::before { width: 15px; }
+  .nav-link:hover::before { width: 15px; }
 </style>

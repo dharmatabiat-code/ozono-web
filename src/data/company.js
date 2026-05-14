@@ -1,5 +1,6 @@
 export const company = {
   name: "Ozono Clinic",
+  ruc: "[PENDIENTE]",
   tagline: "Expertos en Ozonoterapia Médica y Regenerativa",
   description: "Líderes en tratamientos avanzados con ozono medicinal. Aliviamos el dolor crónico y potenciamos tu sistema inmunológico con terapias de vanguardia diseñadas para restaurar tu bienestar desde la raíz.",
   address: {
@@ -14,7 +15,7 @@ export const company = {
   },
   contact: {
     phone: "+51 997 307 782",
-    email: "info@ozonoclinic.dharmatabiat.com",
+    email: "dharmatabiat@gmail.com",
     whatsapp: "+51 997 307 782",
     linkWhatsapp: "https://wa.me/51997307782"
   },
