@@ -119,7 +119,7 @@ npm run build
 ## ⚙️ Configuración & Personalización
 
 ### Datos Dinámicos
-- `src/data/company.js`: Dirección Ayacucho (Av. Los Jardines, San Juan Bautista), +51 997 307 782, socials
+- `src/data/company.js`: Dirección Ayacucho (Av. Los Jardines, San Juan Bautista), +51 +51 921 917 174, socials
 - `src/data/seo.js`: Keywords locales (ozonoterapia ayacucho, hernias discales), schema
 
 ### Imágenes
@@ -142,7 +142,7 @@ npm run build
 | Sitemap missing | Verificar `integrations: [sitemap()]` en config |
 
 ## 📞 Datos de Contacto (de company.js)
-- **Tel/WhatsApp**: +51 997 307 782
+- **Tel/WhatsApp**: +51 +51 921 917 174
 - **Email**: info@ozono.dharmatabiat.com
 - **Ubicación**: Av. Los Jardines Cdra 3, San Juan Bautista, Huamanga, Ayacucho
 - **Socials**: @ozonodharma (FB/IG/TikTok/Twitter)
